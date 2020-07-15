@@ -342,12 +342,18 @@
 							"12").find(":selected").val();
 					var send_number = $(this).closest("tr").find("td").eq("13")
 							.find("input").val();
+					
+					/* console.log(bseq+status+send_money_yn+send_number); */
 
+					
 					//send_money_yn의 option선택
 					var send_money_n = $(this).closest("tr").find("td")
-							.eq("12").find("select").val("N");
+							.eq("12").find(":selected").val("N");
 					var send_money_y = $(this).closest("tr").find("td")
-							.eq("12").find("select").val("Y");
+							.eq("12").find(":selected").val("Y");
+					
+					/* console.log(send_money_n + send_money_y); */
+					
 
 					//send_number의 input선택
 					var send_number_input = $(this).closest("tr").find("td")
@@ -355,8 +361,6 @@
 
 					var status_change = $(this).closest("tr").find("td")
 							.eq("9");
-
-					console.log(send_number_input + status_change);
 
 					if (send_money_yn == 'N') { //N일때
 						$.ajax({
@@ -368,18 +372,12 @@
 								send_number : send_number
 							}
 						}).done(function(resp) {
-							console.log(resp.send_money_yn);
-							if (resp.send_money_yn == 'N') {
 								status_change.html("입금전");
 								send_number_input.val(0);
 								send_number_input.attr('disabled', true);
 								alert("수정완료");
-							} else {
-								send_money_y.prop("selected", true);
-								alert("수정 실패");
-							}
-						}).fail(function(resp){
-							console.log(resp);
+							}).fail(function(resp){
+							alert("수정 실패");
 						})
 					} else if (send_money_yn == "Y") { //Y일때
 						if (send_number == 0) {
@@ -392,15 +390,12 @@
 									send_number : send_number
 								}
 							}).done(function(resp) {
-								console.log(resp.send_money_yn);
-								if (resp.send_money_yn == 'Y') {
 									status_change.html("입금완료/배송준비중");
 									send_number_input.attr('disabled', false);
 									alert("수정완료");
-								} else {
-									send_money_n.prop("selected", true);
-									alert("수정 실패");
-								}
+								 
+							}).fail(function(resp){
+								alert("수정 실패");
 							})
 						} else if (send_number != 0) {
 							$.ajax({
@@ -412,14 +407,11 @@
 									send_number : send_number
 								}
 							}).done(function(resp) {
-								console.log(resp.send_number);
-								if (resp.send_number < 0) {
 									status_change.html("배송중");
 									alert("수정완료");
-								} else {
-									send_number = 0;
-									alert("수정 실패");
-								}
+								
+							}).fail(function(resp){
+								alert("수정 실패");
 							})
 						}
 					}

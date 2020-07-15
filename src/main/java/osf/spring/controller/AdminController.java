@@ -42,7 +42,6 @@ public class AdminController {
 				System.out.println("대표이미지 삭제.");
 			}
 		}
-
 	}
 
 	public void deleteFile(int seq) {
@@ -338,7 +337,7 @@ public class AdminController {
 	@ResponseBody
 	public Object BuyListModify(int bseq, String status, String send_money_yn, long send_number) {
 		
-		System.out.println(bseq + status + send_money_yn + send_number);
+		/* System.out.println(bseq + status + send_money_yn + send_number); */
 		
 		Map<String, Object> updateParam = new HashMap<>();
 		updateParam.put("bseq", bseq);
