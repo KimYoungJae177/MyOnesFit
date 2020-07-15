@@ -318,21 +318,26 @@ div {
                      </div>
 
                      <div>
-                        <ul>
-                           <li><a
-                              href="https://www.instagram.com/onesfit__official/?hl=ko"
-                              onclick="window.open(this.href,'_blank'); return false;">
-                                 <img src="/img/instar.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px">
-                           </a> <a href="https://open.kakao.com/me/onesfit"><img src="/img/kakao.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                              <a
-                              href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
-                              onclick="window.open(this.href,'_blank'); return false;"><img
-                                 src="/img/naver.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                           </li>
-                        </ul>
+                     <ul>
+									<li><a
+										href="https://www.instagram.com/onesfit__official/?hl=ko"
+										onclick="window.open(this.href,'_blank'); return false;">
+											<img src="/img/instar.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
+										<a
+										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
+										onclick="window.open(this.href,'_blank'); return false;"><img
+											src="/img/naver.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px"></a>
+									</li>
+								</ul>
 
 
                      </div>
@@ -382,13 +387,13 @@ div {
 											<td>
 											<input type='hidden' name='product_num' value='${pdto.pseq }'>
 											<input type="text" class="pinput" name="pname"
-												value="${pdto.pname }" style="width: 50px;"
+												value="${pdto.pname }" style="width: 110px;"
 												readonly="readonly"> <br> <br> Size : <input
 												type="text" class="pinput" name="psize"
-												value="${list2[status.index]}" style="width: 15px"
+												value="${list2[status.index]}" style="width: 30px"
 												readonly="readonly"><br> Color : <input
 												type="text" class="pinput" name="pcolor" value="${list1}"
-												style="width: 30px" readonly="readonly"></td>
+												style="width: 38px" readonly="readonly"></td>
 											<td><input type="text" class="pinput" name="price"
 												value="${pdto.price }" style="width: 40px"
 												readonly="readonly"></td>

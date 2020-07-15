@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import osf.spring.dao.AdminDAO;
 import osf.spring.dto.BestProductDTO;
@@ -57,8 +58,8 @@ public class AdminService {
 		return adao.getProduct();
 	}
 
-	public int productAdd(String pname,int price,String content,String category,String sysname) {
-		return adao.productAdd(pname, price, content, category,sysname);
+	public int productAdd(int product_seq,String pname,int price,String content,String category,String sysname) {
+		return adao.productAdd(product_seq,pname, price, content, category,sysname);
 	}
 
 
@@ -82,7 +83,11 @@ public class AdminService {
 		return result;
 	}
 	
+	
+	@Transactional("txManager")
 	public int productDelete(int seq) {
+		adao.deleteOption(seq);
+		adao.deleteImg(seq);
 		return adao.productDelete(seq);
 	}
 	
@@ -192,11 +197,12 @@ public class AdminService {
 		public List<Integer> visit() {
 			return adao.visit();
 		}
-
+		
 		public int pupupDelete(int popup_seq) {
-			return adao.pupupDelete(popup_seq);
-			
-		}
+	         return adao.pupupDelete(popup_seq);
+	         
+	      }
+		
 
 	
 

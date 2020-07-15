@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -10,478 +10,388 @@
 <title>signup</title>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+   crossorigin="anonymous"></script>
 
 <script
-	src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+   src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 
 <script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
+   src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+   crossorigin="anonymous"></script>
 
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
+   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+   crossorigin="anonymous">
+   
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-	<link rel="shortcut icon" href="/img/onesfitcon.png">
-	
-	<script>
-	$(function(){
-		$(".tab").on("click", function() {
-            $(".box_li").css("display", "block");
-            var tab = $(this).val();
-            var tab2 = "";
-            if (tab == 1) {
-               tab2 = "new";
-            }
-            if (tab == 2) {
-               tab2 = 'Y';
-            }
-            if (tab == 3) {
-               tab2 = "outer";
-            }
-            if (tab == 4) {
-               tab2 = "top";
-            }
-            if (tab == 5) {
-               tab2 = "bottom";
-            }
-            if (tab == 6) {
-               tab2 = "acc";
-            }
-
-            location.href="/?tab2="+tab2;
-         })
-	})
-	</script>
+   src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+   crossorigin="anonymous"></script>
 </head>
 <style>
 * {
-	box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 a {
-	color: black;
+   color: black;
 }
 
 input {
-	border: 1px solid #dedede;
+   border: 1px solid #dedede;
 }
 
 div {
-	border: px solid black
+   border: px solid black
 }
 
 /*    모든 영역*/
 #container {
-	height: 1000px
+   height: 1000px
 }
 
 /*    왼쪽 메뉴*/
 #sidemenu {
-	float: left;
-	width: 271px;
-	position: fixed;
-	left: 50px;
-	padding: 32px 0 10px 50px;
-	border: 0px;
+   float: left;
+   width: 271px;
+   position: fixed;
+   left: 50px;
+   padding: 32px 0 10px 50px;
+   border: 0px;
 }
 
 #sidefix ul {
-	list-style: none;
+   list-style: none;
 }
 
 #sidefix ul li a {
-	text-decoration: none;
-	color: black;
-	position: relative;
-	display: inline-block;
-	margin: 7px;
-	color: #000;
-	font-size: 11px;
-	text-transform: uppercase;
+   text-decoration: none;
+   color: black;
+   position: relative;
+   display: inline-block;
+   margin: 7px;
+   color: #000;
+   font-size: 11px;
+   text-transform: uppercase;
 }
 
 #sidefix ul li a:hover {
-	opacity: 50%
+   opacity: 50%
 }
 
 #category ul li a {
-	font-size: 11px;
+   font-size: 11px;
 }
 
 #search {
-	width: 110px;
-	height: 17px;
-	border: 0;
-	vertical-align: middle;
-	background: none;
-	border-bottom: 1px solid #3e3e3e;
+   width: 110px;
+   height: 17px;
+   border: 0;
+   vertical-align: middle;
+   background: none;
+   border-bottom: 1px solid #3e3e3e;
 }
 
 /*    중앙 내용*/
 #contents {
-	float: left;
-	width: 1000px;
-	height: 500px;
-	margin-left: 500px;
-	font-size: 11px;
-	text-align: center;
-	margin-top: 31px;
+   float: left;
+   width: 1000px;
+   height: 500px;
+   margin-left: 500px;
+   font-size: 11px;
+   text-align: center;
+   margin-top: 31px;
 }
 
 #contents li {
-	list-style: none;
+   list-style: none;
 }
 
 .signuptable {
-	text-align: left;
-	width: 900px;
-	height: 400px;
+   text-align: left;
+   width: 900px;
+   height: 400px;
 }
 
 .signuptable tr {
-	border-top: 1px solid #dfdfdf;
+   border-top: 1px solid #dfdfdf;
 }
+
 
 /*    오른쪽 메뉴*/
 #rightmenu {
-	float: left;
-	width: 250px;
-	position: fixed;
-	right: 130px;
-	padding: 49px 80px 0px 0px;
-	text-align: right;
+   float: left;
+   width: 250px;
+   position: fixed;
+   right: 130px;
+   padding: 49px 80px 0px 0px;
+   text-align: right;
 }
 
 #rightmenu ul li {
-	text-decoration: none;
-	color: black;
-	display: inline-block;
-	margin: 0px 0px 5px 0;
-	font-size: 11px;
-	text-transform: uppercase;
+   text-decoration: none;
+   color: black;
+   display: inline-block;
+   margin: 0px 0px 5px 0;
+   font-size: 11px;
+   text-transform: uppercase;
 }
 
 /*        FOOTER*/
 .footer {
-	font-size: 11px;
-	text-align: center;
+   font-size: 11px;
+   text-align: center;
 }
 
 .footer a {
-	text-decoration: none;
-	color: black;
+   text-decoration: none;
+   color: black;
 }
 
 /* 개인정보동의 */
 ul.join_box {
-	border: 1px solid #ddd;
-	background-color: #fff;
+   border: 1px solid #ddd;
+   background-color: #fff;
 }
 
 .checkBox, .checkBox>ul {
-	position: relative;
+   position: relative;
 }
 
 .checkBox>ul>li {
-	float: left;
+   float: left;
 }
 
 .checkBox>ul>li:first-child {
-	width: 85%;
-	padding: 15px;
-	font-weight: 600;
-	color: #888;
+   width: 85%;
+   padding: 15px;
+   font-weight: 600;
+   color: #888;
 }
 
 .checkBox>ul>li:nth-child(2) {
-	position: absolute;
-	top: 50%;
-	right: 30px;
-	margin-top: -12px;
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   margin-top: -12px;
 }
 
 .checkBox>textarea {
-	width: 96%;
-	height: 90px;
-	background-color: #f7f7f7;
-	color: #888;
-	border: none;
+   width: 96%;
+   height: 90px;
+   background-color: #f7f7f7;
+   color: #888;
+   border: none;
 }
 
 .clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
+   content: "";
+   display: block;
+   clear: both;
 }
 
 .clearfix>li {
-	text-align: left;
+   text-align: left;
+}
+
+button {
+border: 1px solid #f7f7f7;
 }
 </style>
 
 <body>
-	<!--       전체 영역-->
-	<div id=OSF_ALL>
-		<!--           왼쪽메뉴, 중앙 내용, 오른쪽 메뉴 -->
-		<div id="container">
+   <!--       전체 영역-->
+   <div id=OSF_ALL>
+      <!--           왼쪽메뉴, 중앙 내용, 오른쪽 메뉴 -->
+      <div id="container">
 
-			 <!--               사이드메뉴-->
-         <c:choose>
-            <c:when test="${loginid eq 'pzlogin'}">
-               <div id="sidemenu">
-                  <div id="sidefix">
-                     <a href="/"> <img src="/img/logo.png"
-                        style="width: 130px; position: relative; left: 45px">
-                     </a>
-                     <div class="memberpage">
-                        <ul>
-                           <li><a href="/member/toLogin">login</a> <a
-                              href="/member/toSignup">join us</a></li>
-                        </ul>
-                     </div>
+         <!--               사이드메뉴-->
+        <div id="sidemenu">
+						<div id="sidefix">
+							<a href="/"> <img src="/img/logo.png"
+								style="width: 130px; position: relative; left: 45px">
+							</a>
+							<div class="memberpage">
+								<ul>
+									<li><a href="/member/toLogin">login</a> <a
+										href="/member/toSignup">join us</a></li>
+								</ul>
+							</div>
 
-                     <div id="category">
-                        <ul>
-                           <li value="1" class="tab"><a href="#">NEW ARRIVAL</a></li>
-                           <li value="2" class="tab"><a href="#">BEST ITEM</a></li>
-                           <li value="3" class="tab"><a href="#">OUTERWEAR</a></li>
-                           <li value="4" class="tab"><a href="#">TOP</a></li>
-                           <li value="5" class="tab"><a href="#">PANTS</a></li>
-                           <li value="6" class="tab"><a href="#">ACC</a></li>
-                           <li><a href="/daily/daily_list?page=1"
-                              style="font-size: 11px;">OSF DAILY LOOK</a></li>
-                           <li><a href="/notice/notice_list?page=1"
-                              style="font-size: 11px;">NOTICE</a></li>
-                        </ul>
-                     </div>
+							<div id="category">
+								<ul>
+									<li value="1" class="tab"><a href="#">NEW ARRIVAL</a></li>
+									<li value="2" class="tab"><a href="#">BEST ITEM</a></li>
+									<li value="3" class="tab"><a href="#">OUTERWEAR</a></li>
+									<li value="4" class="tab"><a href="#">TOP</a></li>
+									<li value="5" class="tab"><a href="#">PANTS</a></li>
+									<li value="6" class="tab"><a href="#">ACC</a></li>
+									<li><a href="/daily/daily_list?page=1"
+										style="font-size: 11px;">OSF DAILY LOOK</a></li>
+									<li><a href="/notice/notice_list?page=1"
+										style="font-size: 11px;">NOTICE</a></li>
+								</ul>
+							</div>
 
-                     <div>
-                        <ul>
-                           <li><a
-                              href="https://www.instagram.com/onesfit__official/?hl=ko"
-                              onclick="window.open(this.href,'_blank'); return false;">
-                                 <img src="/img/instar.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px">
-                           </a> <a href="https://open.kakao.com/me/onesfit"><img src="/img/kakao.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                              <a
-                              href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
-                              onclick="window.open(this.href,'_blank'); return false;"><img
-                                 src="/img/naver.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                           </li>
-                        </ul>
-
-
-                     </div>
-                  </div>
-               </div>
-            </c:when>
-            <c:otherwise>
-               <div id="sidemenu">
-                  <div id="sidefix">
-                     <a href="/"> <img src="/img/logo.png"
-                        style="width: 130px; position: relative; left: 45px">
-                     </a>
-                     <div class="memberpage">
-                        <ul>
-                           <li><a href="/member/logout">logout</a> <a
-                              href="/member/toProfile?id=${loginInfo.id}">PROFILE</a></li>
-                           <li><a href="/member/tomyPage">my page</a> <a
-                              href="/member/cart?parent_id=${loginInfo.id}">cart </a> <a
-                              href="/member/orderList?id=${loginid }">order</a></li>
-
-                        </ul>
-                     </div>
-
-                     <div id="category">
-                        <ul>
-                           <li value="1" class="tab"><a href="#">NEW ARRIVAL</a></li>
-                           <li value="2" class="tab"><a href="#">BEST ITEM</a></li>
-                           <li value="3" class="tab"><a href="#">OUTERWEAR</a></li>
-                           <li value="4" class="tab"><a href="#">TOP</a></li>
-                           <li value="5" class="tab"><a href="#">PANTS</a></li>
-                           <li value="6" class="tab"><a href="#">ACC</a></li>
-                           <li><a href="/daily/daily_list?page=1"
-                              style="font-size: 11px;">OSF DAILY LOOK</a>
-                           <li><a href="/notice/notice_list?page=1"
-                              style="font-size: 11px;">NOTICE</a></li>
-                           <c:choose>
-                              <c:when test="${loginid eq 'OSF'}">
-                                 <li><a href="/admin/adminMain">관리자PAGE</a>
-                              </c:when>
-                              <c:otherwise>
-
-                              </c:otherwise>
-                           </c:choose>
-
-                        </ul>
-                     </div>
-
-                     <div>
-
-                        <ul>
-                           <li><a
-                              href="https://www.instagram.com/onesfit__official/?hl=ko"
-                              onclick="window.open(this.href,'_blank'); return false;"><img
-                                 src="/img/instar.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                              <a href="https://open.kakao.com/me/onesfit"><img src="/img/kakao.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                                 <a href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"onclick="window.open(this.href,'_blank'); return false;" ><img src="/img/naver.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                           </li>
-                        </ul>
+							<div>
+								<ul>
+									<li><a
+										href="https://www.instagram.com/onesfit__official/?hl=ko"
+										onclick="window.open(this.href,'_blank'); return false;">
+											<img src="/img/instar.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
+										<a
+										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
+										onclick="window.open(this.href,'_blank'); return false;"><img
+											src="/img/naver.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px"></a>
+									</li>
+								</ul>
 
 
-                     </div>
-                  </div>
-               </div>
-            </c:otherwise>
-         </c:choose>
+							</div>
+						</div>
+					</div>
 
-			<!--               중앙 내용-->
-			<div id="contents">
-				<h2 style="font-size: 14px; text-align: center;">SIGN UP</h2>
-				<br> <br>
-				<div>
-					<form id="enrollForm" action="/member/signup" method="post">
-						<table class="signuptable">
-							<tbody>
+         <!--               중앙 내용-->
+         <div id="contents">
+            <h2 style="font-size: 14px; text-align: center; width: 900px;">SIGN UP</h2>
+            <br> <br>
+            <div>
+               <form id="enrollForm" action="/member/signup" method="post">
+                  <table class="signuptable">
+                     <tbody>
 
-								<tr>
-									<th style="width: 150px">ID</th>
-									<td style="padding-top: 10px; padding-bottom: px;"><input type="text"
-										id="customerId" style="width: 250px; height: 20px;" name="id">
+                        <tr>
+                           <th style="width: 150px">ID</th>
+                           <td style="padding-top: 10px; padding-bottom: px;"><input type="text"
+                              id="customerId" style="width: 250px; height: 20px;" name="id">
 
-										<button type="button" class="doubleChk"  id="idChk" 
-											style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;">중복확인</button>
-											<div style="color: #999" id="idcond">(※영문+숫자 조합하여 6~12자로 입력해주세요.)</div> 
-										<br> <span id="idbox"></span></td>
-								</tr>
-								<tr>
-									<th scope="row">PASSWORD</th>
-									<td style="padding-top: 10px; padding-bottom: px;">
-									<input type="password"
-										id="customerPw" name="pw" style="width: 250px; height: 20px;">
-										<div style="color: #999">(※ 영문+숫자+특수문자 조합하여 8~16자로 입력해 주세요. 사용 가능한 특수기호:
-													~!@$%^&*/?#+_-)</div>   <br>
-													<span id="pwMsg"></span></td>
-								</tr>
-								<tr>
-									<th scope="row">PASSWORD CHECK</th>
-									<td style="padding-top: 10px; padding-bottom: 10px;"><input type="password"
-										id="customerPwre" name="customerPwre" style="width: 250px; height: 20px;"> <br> 
-										<span id="pwreMsg"></span></td>
-								</tr>
+                              <button type="button" class="doubleChk"  id="idChk" 
+                                 style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;">중복확인</button>
+                                 <div style="color: #999" id="idcond">(※영문+숫자 조합하여 6~12자로 입력해주세요.)</div> 
+                              <br> <span id="idbox"></span></td>
+                        </tr>
+                        <tr>
+                           <th scope="row">PASSWORD</th>
+                           <td style="padding-top: 10px; padding-bottom: px;">
+                           <input type="password"
+                              id="customerPw" name="pw" style="width: 250px; height: 20px;">
+                              <div style="color: #999">(※ 영문+숫자+특수문자 조합하여 8~16자로 입력해 주세요. 사용 가능한 특수기호:
+                                       ~!@$%^&*/?#+_-)</div>   <br>
+                                       <span id="pwMsg"></span></td>
+                        </tr>
+                        <tr>
+                           <th scope="row">PASSWORD CHECK</th>
+                           <td style="padding-top: 10px; padding-bottom: 10px;"><input type="password"
+                              id="customerPwre" name="customerPwre" style="width: 250px; height: 20px;"> <br> 
+                              <span id="pwreMsg"></span></td>
+                        </tr>
 
-								<tr>
-									<th scope="row">NAME</th>
-									<td style="padding-top: 10px; padding-bottom: 10px;"><input type="text"
-							id="customerName" name="name" style="width: 250px; height: 20px;">
-							 <br>
-													<span id="nameMsg"></span></td>
-								</tr>
+                        <tr>
+                           <th scope="row">NAME</th>
+                           <td style="padding-top: 10px; padding-bottom: 10px;"><input type="text"
+                     id="customerName" name="name" style="width: 250px; height: 20px;">
+                      <br>
+                                       <span id="nameMsg"></span></td>
+                        </tr>
 
 
 
-								<tr>
-									<th scope="row">EMAIL</th>
-									<td style="padding-top: 10px; padding-bottom: 10px;">
-									<input type="text" id="email" name="email" style="width: 250px; height: 20px;"> 
-									<button type="button" class="emailBtn1" id="sendmail"
-											style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;">인증하기</button>
-											<br>
-											<input
-										id="code" class="ecode" style="width: 100px; height: 20px; margin-top: 3px;" placeholder="인증코드 입력" >
-											
-									
+                        <tr>
+                           <th scope="row">EMAIL</th>
+                           <td style="padding-top: 10px; padding-bottom: 10px;">
+                           <input type="text" id="email" name="email" style="width: 250px; height: 20px;"> 
+                           <button type="button" class="emailBtn1" id="sendmail"
+                                 style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;">인증하기</button>
+                                 <br>
+                                 <input
+                              id="code" class="ecode" style="width: 100px; height: 20px; margin-top: 3px; text-align: center;" placeholder="인증코드 입력" >
+                                 
+                           
 
-										</td>
-								</tr>
+                              </td>
+                        </tr>
 
-								<tr>
-									<th scope="row">EMAIL 수신여부</th>
-									<td style="padding-top: 10px; padding-bottom: 10px;"><input
-										type="checkbox"> 동의함<br>
-										<div style="color: #999">쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실
-											수 있습니다.</div></td>
-								</tr>
+                        <tr>
+                           <th scope="row">EMAIL 수신여부</th>
+                           <td style="padding-top: 10px; padding-bottom: 10px;"><input
+                              type="checkbox"> 동의함<br>
+                              <div style="color: #999">쇼핑몰에서 제공하는 유익한 이벤트 소식을 Email로 받으실
+                                 수 있습니다.</div></td>
+                        </tr>
 
 
 
-								<tr>
-									<th scope="row">PHONE</th>
-									<td style="padding-top: 10px; padding-bottom: 10px;">
-									<input type="text"
-										name="phone1" id="phone" maxlength="3" style="width: 100px; height: 20px;">
-										
-										<span style="margin: 0 5px 0 5px; color: black;"> - </span>
-										
-										<input
-										 type="text" id="phone1" oninput='maxLengthCheck(this)'; maxlength="4" name="phone2" style="width: 100px; height: 20px;">
-										
-											<span style="margin: 0 5px 0 5px; color: black;"> - </span>
-											
-											<input
-										type="text" id="phone2" name="phone3" maxlength="4" style="width: 100px; height: 20px;">
-										<br> <span id="phoneMsg"></span>
-										
-										
-										</td>
-								</tr>
+                        <tr>
+                           <th scope="row">PHONE</th>
+                           <td style="padding-top: 10px; padding-bottom: 10px;">
+                           <input type="text"
+                              name="phone1" id="phone" maxlength="3" style="width: 100px; height: 20px;">
+                              
+                              <span style="margin: 0 5px 0 5px; color: black;"> - </span>
+                              
+                              <input
+                               type="text" id="phone1" oninput='maxLengthCheck(this)'; maxlength="4" name="phone2" style="width: 100px; height: 20px;">
+                              
+                                 <span style="margin: 0 5px 0 5px; color: black;"> - </span>
+                                 
+                                 <input
+                              type="text" id="phone2" name="phone3" maxlength="4" style="width: 100px; height: 20px;">
+                              <br> <span id="phoneMsg"></span>
+                              
+                              
+                              </td>
+                        </tr>
 
-								<tr>
-									<th scope="row">SMS 수신여부</th>
+                        <tr>
+                           <th scope="row">SMS 수신여부</th>
 
-									<td style="padding-top: 10px; padding-bottom: 10px;"><input
-										type="checkbox"> 동의함<br>
-										<div style="color: #999">쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실
-											수 있습니다.</div></td>
-								</tr>
+                           <td style="padding-top: 10px; padding-bottom: 10px;"><input
+                              type="checkbox"> 동의함<br>
+                              <div style="color: #999">쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실
+                                 수 있습니다.</div></td>
+                        </tr>
 
-								<tr>
-									<th scope="row">ZIPCODE</th>
+                        <tr>
+                           <th scope="row">ADDRESS</th>
 
-									<td style="padding-top: 10px; padding-bottom: 10px;"><input
-										type=text  readonly id="zipcode" name="zipcode" style="width: 100px; height: 20px;">
-										<button type="button" onclick="sample4_execDaumPostcode()"
-											style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;" value="찾기">찾기</button>
-										<br> 
-										<input type=text readonly id='add1' name='address1' 
-										style="width: 270px; height: 20px; margin-top: 3px; margin-bottom: 3px;"> <br> 
-										<input
-										type='text'  id='add2' name='address2'
-													placeholder="상세주소 입력" style="width: 270px; height: 20px;"></td>
-								</tr>
+                           <td style="padding-top: 10px; padding-bottom: 10px;"><input
+                              type=text  readonly id="zipcode" name="zipcode" style="width: 100px; height: 20px;">
+                              <button type="button" onclick="sample4_execDaumPostcode()"
+                                 style="width: 60px; height: 20px; margin-right: 10px; background-color: white; border-radius: 5px;" value="찾기">찾기</button>
+                              <br> 
+                              <input type=text readonly id='add1' name='address1' 
+                              style="width: 270px; height: 20px; margin-top: 3px; margin-bottom: 3px;"> <br> 
+                              <input
+                              type='text'  id='add2' name='address2'
+                                       placeholder="상세주소 입력" style="width: 270px; height: 20px;"></td>
+                        </tr>
 
-								<tr>
-									<th scope="row">AGREE
-									<td
-										style="padding-top: 10px; border-bottom: 1px solid #dedede;">
+                        <tr>
+                           <th scope="row">AGREE
+                           <td
+                              style="padding-top: 10px; border-bottom: 1px solid #dedede;">
 
-										<ul class="join_box">
+                              <ul class="join_box">
 
-											<li class="checkBox check02">
-												<ul class="clearfix">
-													<li>이용약관 동의(필수)</li>
-													<li class="checkBtn"><input type="checkbox"
-														id="checkbox1" name="chk"></li>
-												</ul> <textarea name="" id="">제1조(목적)
+                                 <li class="checkBox check02">
+                                    <ul class="clearfix">
+                                       <li>이용약관 동의(필수)</li>
+                                       <li class="checkBtn"><input type="checkbox"
+                                          id="checkbox1" name="chk"></li>
+                                    </ul> <textarea name="" id="">제1조(목적)
 이 약관은 OO 회사(전자상거래 사업자)가 운영하는 OO 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리.의무 및 책임사항을 규정함을 목적으로 합니다.
 ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.」
 
@@ -643,14 +553,14 @@ ul.join_box {
 ② “몰”과 이용자 간에 제기된 전자상거래 소송에는 한국법을 적용합니다.
 
 부 칙(시행일) 이 약관은 년 월 일부터 시행합니다. 부 칙(시행일) 이 약관은 년 월 일부터 시행합니다. </textarea>
-											</li>
+                                 </li>
 
-											<li class="checkBox check03">
-												<ul class="clearfix">
-													<li>개인정보 수집 및 이용에 대한 안내(필수)</li>
-													<li class="checkBtn"><input type="checkbox"
-														id="checkbox2" name="chk"></li>
-												</ul> <textarea name="" id="">** 본 양식은 쇼핑몰 운영에 도움을 드리고자 샘플로 제공되는 서식으로 쇼핑몰 운영형태에 따른 수정이 필요합니다. 쇼핑몰에 적용하시기 전, 쇼핑몰 운영 사항 등을 확인하시고 적절한 내용을 반영하여 사용하시기 바랍니다. **
+                                 <li class="checkBox check03">
+                                    <ul class="clearfix">
+                                       <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
+                                       <li class="checkBtn"><input type="checkbox"
+                                          id="checkbox2" name="chk"></li>
+                                    </ul> <textarea name="" id="">** 본 양식은 쇼핑몰 운영에 도움을 드리고자 샘플로 제공되는 서식으로 쇼핑몰 운영형태에 따른 수정이 필요합니다. 쇼핑몰에 적용하시기 전, 쇼핑몰 운영 사항 등을 확인하시고 적절한 내용을 반영하여 사용하시기 바랍니다. **
 
 1. 개인정보 수집목적 및 이용목적
 
@@ -700,105 +610,106 @@ o 로그 기록
 
 ※ 동의를 거부할 수 있으나 거부시 회원 가입이 불가능합니다.
                                                             </textarea>
-											</li>
-										</ul>
+                                 </li>
+                              </ul>
 
-									</td>
-								</tr>
-
-
-
-								<tr>
-									<td style="text-align: center;">
-										<button type="button"  id="Submit1" class="btn btn-outline-dark"
-											style="width: 200px; position: relative; left: 320px; margin-top: 10px;">가입하기</button>
-									</td>
-
-								</tr>
+                           </td>
+                        </tr>
 
 
 
-							</tbody>
+                        <tr>
+                           <td style="text-align: center;">
+                              <button type="button"  id="Submit1" class="btn btn-outline-dark"
+                                 style="width: 200px; position: relative; left: 350px; margin-top: 10px; border: 1px solid #f7f7f7;">SignUp</button>
+                           </td>
 
-						</table>
-
-					</form>
-				</div>
-
-
-			</div>
-			<div id="rightmenu">
-				<ul>
-					<li><b>OPENING</b></li>
-					<br>
-					<li class="phone">T. 02-777-7777</li>
-					<li class="font10">MON-FRI / 11AM - 5PM</li>
-					<li class="font10">lunch / 1AM - 2PM</li>
-					<li class="font10">(close, sat sun holiday)</li>
-				</ul>
+                        </tr>
 
 
-				<ul>
 
-				</ul>
-				<ul>
-					<li><b>BANK INFO</b></li>
-					<br>
-					<li>국민 5591-010-4168-906</li>
-					<li>ONESFIT (권성택)</li>
-				</ul>
-			</div>
-		</div>
+                     </tbody>
 
-		<br>
+                  </table>
 
-		<div class="footer" style="margin: auto;">
-			<a href="">사이트 소개</a> | <a href="">이용약관</a> | <a href="">개인정보취급방침</a>
-			| <a href="">이메일 무단수집거부</a> | <a href="">책임의 한계와 법적고지</a> | <a
-				href="">이용안내</a> | <a href="">모바일 버전</a> <br> <br>
-			<div>
-				COMPANY : ONESFIT <br> PHONE : 010-7777-7777 <br> 사업자 번호 :
-				145-51-00571 <br> 주소 : 강원도 원주시 우산동 상지대길 9 (402호) <br>
-				OWNER : 원에스핏 | WEB MANAGER : 잊재웡 <br> @ OSF ONESFIT
+               </form>
+            </div>
 
-			</div>
-		</div>
 
-	</div>
-	<script>
-	function sample4_execDaumPostcode() {
-		new daum.Postcode({
-			oncomplete : function(data) {
-				
-				var addr = '';
-				var extraAddr='';
-				
-				if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+         </div>
+         
+         <div id="rightmenu">
+            <ul>
+               <li><b>OPENING</b></li>
+               <br>
+               <li class="phone">T. 02-777-7777</li>
+               <li class="font10">MON-FRI / 11AM - 5PM</li>
+               <li class="font10">lunch / 1AM - 2PM</li>
+               <li class="font10">(close, sat sun holiday)</li>
+            </ul>
+
+
+            <ul>
+
+            </ul>
+            <ul>
+               <li><b>BANK INFO</b></li>
+               <br>
+               <li>국민 5591-010-4168-906</li>
+               <li>ONESFIT (권성택)</li>
+            </ul>
+         </div>
+      </div>
+
+      <br>
+
+      <div class="footer" style="margin: auto;">
+         <a href="">사이트 소개</a> | <a href="">이용약관</a> | <a href="">개인정보취급방침</a>
+         | <a href="">이메일 무단수집거부</a> | <a href="">책임의 한계와 법적고지</a> | <a
+            href="">이용안내</a> | <a href="">모바일 버전</a> <br> <br>
+         <div>
+            COMPANY : ONESFIT <br> PHONE : 010-7777-7777 <br> 사업자 번호 :
+            145-51-00571 <br> 주소 : 강원도 원주시 우산동 상지대길 9 (402호) <br>
+            OWNER : 원에스핏 | WEB MANAGER : 이재원 <br> @ OSF ONESFIT
+
+         </div>
+      </div>
+
+   </div>
+   <script>
+   function sample4_execDaumPostcode() {
+      new daum.Postcode({
+         oncomplete : function(data) {
+            
+            var addr = '';
+            var extraAddr='';
+            
+            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
                     addr = data.roadAddress;
                 } else { // 사용자가 지번 주소를 선택했을 경우(J)
                     addr = data.jibunAddress;
                 }
-				
-				var roadAddr = data.roadAddress; // 도로명 주소 변수
-				
-				document.getElementById('zipcode').value = data.zonecode;
-				document.getElementById("add1").value = addr;
-			}
-		}).open();
-	}
-	
-	
-	
-	// 가입하기 버튼
-	$("#Submit1").click(function() {
+            
+            var roadAddr = data.roadAddress; // 도로명 주소 변수
+            
+            document.getElementById('zipcode').value = data.zonecode;
+            document.getElementById("add1").value = addr;
+         }
+      }).open();
+   }
+   
+   
+   
+   // 가입하기 버튼
+   $("#Submit1").click(function() {
 
-		if (isChk()) {
-			alert("회원가입에 성공하였습니다. 감사합니다!");
-			$("#enrollForm").submit();
-		}
-	});
-	
-	 var code = 0;
+      if (isChk()) {
+         alert("회원가입에 성공하였습니다. 감사합니다!");
+         $("#enrollForm").submit();
+      }
+   });
+   
+    var code = 0;
         $("#sendmail").on("click", function() {
             if ($("#email").val() == "") {
                 alert("이메일을 입력해주십시오.");
@@ -811,7 +722,7 @@ o 로그 기록
                         email: $("#email").val()
                     }
                 }).done(function(resp) {
-                	  if (resp.result==true) {
+                     if (resp.result==true) {
                           alert("인증번호가 발송되었습니다.");
                           $(".code").css("display", "block");
                           code = resp.code;
@@ -822,7 +733,9 @@ o 로그 기록
             }
         })
 
-	$("#idChk").on("click", function() {
+
+
+      $("#idChk").on("click", function() {
          var customerId = /^[a-zA-Z0-9]{6,12}$/;
          if(!customerId.test($("#customerId").val())||$("#customerId").val()==""){
             $('#idbox').text(
@@ -845,237 +758,237 @@ o 로그 기록
                $('#idbox').css("color", "red");
                $("#idbox").html("이미 존재하는 아이디 입니다.");
             }
-         
-            
          })
          }
       
    })
-	
-	
-	//유효성검사
-	function isChk() {
+   
+   
+   //유효성검사
+   function isChk() {
 
-		// 아이디 중복체크
-		if (isEmpty($("#customerId").val())) {
-			alert("아이디를 확인하세요.");
-			return false;
-		}
-		if ($("#idbox").html() == "중복확인 버튼을 눌러주세요.") {
-			alert("아이디 중복체크를 해주세요.");
-			return false;
-		}
-		
-		if ($("#idbox").html() != "사용가능 한 아이디 입니다.") {
-			alert("아이디가 중복되었습니다. 확인해주세요..");
-			return false;
-		}
-		
-		// 비밀번호
-		if (isEmpty($("#customerPw").val())) {
-			alert("비밀번호를 입력해 주세요.");
-			$("#customerPw").focus();
-			return false;
-		}
-		// 이름
-		if (isEmpty($("#customerName").val())) {
-			alert("이름을 입력해 주세요.");
-			$("#customerName").focus();
-			return false;
-		}
-		// 이메일
-		if (isEmpty($("#email").val())) {
-			alert("이메일 입력해 주세요.");
-			$("#email").focus();
-			return false;
-		}
-		if(isEmpty($("#code").val())){
-			alert("인증번호를 입력해주세요.");
-			 $("#code").focus();
-			 return false
-		}
-		if ($("#code").val() != code) {
+      // 아이디 중복체크
+       if (isEmpty($("#customerId").val())) {
+         alert("아이디를 확인하세요.");
+         return false;
+      }
+      if ($("#idbox").html() == "중복확인 버튼을 눌러주세요.") {
+         alert("아이디 중복체크를 해주세요.");
+         return false;
+      }
+      
+      
+      
+      if ($("#idbox").html() != "사용가능 한 아이디 입니다.") {
+         alert("아이디가 중복되었습니다. 확인해주세요..");
+         return false;
+      } 
+      
+      // 비밀번호
+      if (isEmpty($("#customerPw").val())) {
+         alert("비밀번호를 입력해 주세요.");
+         $("#customerPw").focus();
+         return false;
+      }
+      // 이름
+      if (isEmpty($("#customerName").val())) {
+         alert("이름을 입력해 주세요.");
+         $("#customerName").focus();
+         return false;
+      }
+      // 이메일
+      if (isEmpty($("#email").val())) {
+         alert("이메일 입력해 주세요.");
+         $("#email").focus();
+         return false;
+      }
+      if(isEmpty($("#code").val())){
+         alert("인증번호를 입력해주세요.");
+          $("#code").focus();
+          return false
+      }
+      if ($("#code").val() != code) {
             alert("메일 인증코드가 다릅니다.");
             $("#code").focus();
             return false;
-		}
-		//휴대폰
-		if (isEmpty($("#phone").val())) {
-			alert("휴대폰번호 입력해 주세요.");
-			$("#phone").focus();
-			return false;
-		}
-		if (isEmpty($("#zipcode").val())) {
-			alert("주소를 확인해주세요.");
-			return false;
-		}
-		if (isEmpty($("#add2").val())) {
-			alert("상세주소를 입력해주세요.");
-			return false;
-		}
+      }
+      //휴대폰
+      if (isEmpty($("#phone").val())) {
+         alert("휴대폰번호 입력해 주세요.");
+         $("#phone").focus();
+         return false;
+      }
+      if (isEmpty($("#zipcode").val())) {
+         alert("주소를 확인해주세요.");
+         return false;
+      }
+      if (isEmpty($("#add2").val())) {
+         alert("상세주소를 입력해주세요.");
+         return false;
+      }
 
-		if ($("#checkbox1").is(":checked") == false) {
-			alert("이용약관에 동의 해주세요.");
-			return false;
-		}
-		if ($("#checkbox2").is(":checked") == false) {
-			alert("개인정보수집에 동의 해주세요.");
-			return false;
-		}
-		return true;
-	}
+      if ($("#checkbox1").is(":checked") == false) {
+         alert("이용약관에 동의 해주세요.");
+         return false;
+      }
+      if ($("#checkbox2").is(":checked") == false) {
+         alert("개인정보수집에 동의 해주세요.");
+         return false;
+      }
+      return true;
+   }
         
 
-	// 빈값 체크
-	function isEmpty(text) {
-		if (text != null && text != "") {
-			return false;
-		} else {
-			return true;
-		}
-	}
-	
-	
-	$(document)
-			.ready(
-					function() {
-						var customerName = /^[가-힣]([가-힣]{1,3})$/;
-						var customerPw = /^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
-						var phone = /^[0-9]*$/;
-						var customerId = /^[a-zA-Z0-9]{6,12}$/;
-						
-						//아이디 검사
-					
-						
-						$('#customerId')
-						.focusout(
-								function() {
-									if (!customerId.test($(
-											'#customerId').val())) {
-										$('#idbox').css("color",
-												"red");
-										if($("#cuntomerId")!=""){
-											$('#idbox').text(
-													"영문+숫자 6~12자리 조건에 맞지않습니다.");
-										}
-										$(this).val("");
-									} else {
-										$('#idbox').text("중복확인 버튼을 눌러주세요.");
-									}
-								});
-						
-						
+   // 빈값 체크
+   function isEmpty(text) {
+      if (text != null && text != "") {
+         return false;
+      } else {
+         return true;
+      }
+   }
+   
+   
+   $(document)
+         .ready(
+               function() {
+                  var customerName = /^[가-힣]([가-힣]{1,3})$/;
+                  var customerPw = /^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+                  var phone = /^[0-9]*$/;
+                  var customerId = /^[a-zA-Z0-9]{6,12}$/;
+                  
+                  //아이디 검사
+               
+                  
+                  $('#customerId')
+                  .focusout(
+                        function() {
+                           if (!customerId.test($(
+                                 '#customerId').val())) {
+                              $('#idbox').css("color",
+                                    "red");
+                              if($("#cuntomerId")!=""){
+                                 $('#idbox').text(
+                                       "영문+숫자 6~12자리 조건에 맞지않습니다.");
+                              }
+                              $(this).val("");
+                           } else {
+                              $('#idbox').text("중복확인 버튼을 눌러주세요.");
+                           }
+                        });
+                  
+                  
 
-						// 이름 검사
-						$('#customerName')
-								.focusout(
-										function() {
-											if (!customerName.test($(
-													'#customerName').val())) {
-												$('#nameMsg').css("color",
-														"red");
-												$('#nameMsg').text(
-														"한글만 입력 가능합니다.");
-												$(this).val("");
-											} else {
-												$('#nameMsg').text("");
-											}
-										});
-						// 비밀번호 검사
-						$('#customerPw')
-								.focusout(
-										function() {
-											if (!customerPw.test($(
-													'#customerPw').val())) {
-												$('#pwMsg').css("color",
-														"red");
-												$('#pwMsg')
-														.text(
-																"[사용불가] 비밀번호 기준에 맞지 않습니다.");
-												$(this).val("");
-											} else if (customerPw.test($(
-													'#customerPw').val())
-													&& $('#customerPw')
-															.val().length > 10) {
-												$('#pwMsg').css("color",
-														"blue");
-												$('#pwMsg')
-														.text(
-																"[안전] 사용 가능 비밀번호입니다.");
-											} else {
-												$('#pwMsg').css("color",
-														"gray");
-												$('#pwMsg')
-														.text(
-																"[보통] 적정수준의 비밀번호입니다.");
-											}
-										});
+                  // 이름 검사
+                  $('#customerName')
+                        .focusout(
+                              function() {
+                                 if (!customerName.test($(
+                                       '#customerName').val())) {
+                                    $('#nameMsg').css("color",
+                                          "red");
+                                    $('#nameMsg').text(
+                                          "한글만 입력 가능합니다.");
+                                    $(this).val("");
+                                 } else {
+                                    $('#nameMsg').text("");
+                                 }
+                              });
+                  // 비밀번호 검사
+                  $('#customerPw')
+                        .focusout(
+                              function() {
+                                 if (!customerPw.test($(
+                                       '#customerPw').val())) {
+                                    $('#pwMsg').css("color",
+                                          "red");
+                                    $('#pwMsg')
+                                          .text(
+                                                "[사용불가] 비밀번호 기준에 맞지 않습니다.");
+                                    $(this).val("");
+                                 } else if (customerPw.test($(
+                                       '#customerPw').val())
+                                       && $('#customerPw')
+                                             .val().length > 10) {
+                                    $('#pwMsg').css("color",
+                                          "blue");
+                                    $('#pwMsg')
+                                          .text(
+                                                "[안전] 사용 가능 비밀번호입니다.");
+                                 } else {
+                                    $('#pwMsg').css("color",
+                                          "gray");
+                                    $('#pwMsg')
+                                          .text(
+                                                "[보통] 적정수준의 비밀번호입니다.");
+                                 }
+                              });
 
-						// 비밀번호1 = 비밀번호2
-						$('#customerPwre')
-								.focusout(
-										function() {
-											if ($('#customerPwre').val() == $(
-													'#customerPw').val()
-													&& !($('#customerPwre')
-															.val() == "")) {
-												$('#pwreMsg').css("color",
-														"blue");
-												$('#pwreMsg').text(
-														"입력한 비밀번호가 일치합니다.");
-											} else {
-												$('#pwreMsg').css("color",
-														"red");
-												$('#pwreMsg').text(
-														"비밀번호가 일치하지 않습니다.");
-												$(this).val("");
-											}
-										});
-						
-						//휴대폰1 검사
-						$("#phone1")
-								.focusout(
-										function() {
-											if (!phone.test($('#phone1')
-													.val())
-													|| $("#phone1").val().length < 4) {
-												$('#phoneMsg').css("color",
-														"red");
-												$('#phoneMsg').text(
-														"재확인 해주십시오.");
-												$(this).val("");
-											} else {
-												$('#phoneMsg').text("");
-											}
-										});
-						//휴대폰2 검사
-						$("#phone2")
-								.focusout(
-										function() {
-											if (!phone.test($('#phone2')
-													.val())
-													|| $("#phone2").val().length < 4) {
-												$('#phoneMsg').css("color",
-														"red");
-												$('#phoneMsg').text(
-														"재확인 해주십시오.");
-												$(this).val("");
-											} else {
-												$('#phoneMsg').text("");
-											}
-										});
-					});
-	
-						function maxLengthCheck(object){
-						    if (object.value.length == object.maxLength){
-						    	if ($("#phone1").val().length == 4) {
-						            $("#phone2").focus();
-						         }
-						    }    
-						}
+                  // 비밀번호1 = 비밀번호2
+                  $('#customerPwre')
+                        .focusout(
+                              function() {
+                                 if ($('#customerPwre').val() == $(
+                                       '#customerPw').val()
+                                       && !($('#customerPwre')
+                                             .val() == "")) {
+                                    $('#pwreMsg').css("color",
+                                          "blue");
+                                    $('#pwreMsg').text(
+                                          "입력한 비밀번호가 일치합니다.");
+                                 } else {
+                                    $('#pwreMsg').css("color",
+                                          "red");
+                                    $('#pwreMsg').text(
+                                          "비밀번호가 일치하지 않습니다.");
+                                    $(this).val("");
+                                 }
+                              });
+                  
+                  //휴대폰1 검사
+                  $("#phone1")
+                        .focusout(
+                              function() {
+                                 if (!phone.test($('#phone1')
+                                       .val())
+                                       || $("#phone1").val().length < 4) {
+                                    $('#phoneMsg').css("color",
+                                          "red");
+                                    $('#phoneMsg').text(
+                                          "재확인 해주십시오.");
+                                    $(this).val("");
+                                 } else {
+                                    $('#phoneMsg').text("");
+                                 }
+                              });
+                  //휴대폰2 검사
+                  $("#phone2")
+                        .focusout(
+                              function() {
+                                 if (!phone.test($('#phone2')
+                                       .val())
+                                       || $("#phone2").val().length < 4) {
+                                    $('#phoneMsg').css("color",
+                                          "red");
+                                    $('#phoneMsg').text(
+                                          "재확인 해주십시오.");
+                                    $(this).val("");
+                                 } else {
+                                    $('#phoneMsg').text("");
+                                 }
+                              });
+               });
+   
+                  function maxLengthCheck(object){
+                      if (object.value.length == object.maxLength){
+                         if ($("#phone1").val().length == 4) {
+                              $("#phone2").focus();
+                           }
+                      }    
+                  }
 
-	 
-	
+    
+   
         </script>
 </body>
 </html>

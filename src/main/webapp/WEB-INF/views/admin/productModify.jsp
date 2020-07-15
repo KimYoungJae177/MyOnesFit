@@ -251,7 +251,7 @@
                 	$(this).focus();}
                 })
                 
-                $("input[name=color]").on("propertychange change keyup paste input",function(){
+                $("input[name=color]").on("keyup",function(){
                 	if($("input[name=psize]").is(":checked") == false){$("input[name=color]").val("");
                 	alert("사이즈를 선택해주세요.");
                 	$("input[name=psize]").focus();}
@@ -285,7 +285,7 @@
                     	if(!checkEmpty){
                             if($("input[name=price]").val() != ""){
                             	
-                                if($("#textArea").val() != ""){
+                                if($("#summernote").val() != ""){
                                     	
 
                                     	$("input[name=color]").each(function(index1,item1){
@@ -545,10 +545,7 @@
 				</script>
 			</c:forEach>
 		</c:when>
-		<c:otherwise>
-			<script>$("#sizeBox").html("선택한 사이즈가 없습니다.");
-			</script>
-		</c:otherwise>
+
 	</c:choose>
 	
 	<script>

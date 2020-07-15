@@ -238,7 +238,8 @@ public class MemberDAO {
 		Map<String,String> map = new HashMap();
 		map.put("id", id);
 		map.put("point",""+point);
-		mybatis.update("Member.addPoint");
+		System.out.println("포인트 몇이냐? "+point);
+		mybatis.update("Member.addPoint",map);
 		
 	}
 

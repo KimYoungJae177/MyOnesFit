@@ -346,6 +346,8 @@ textarea {
 
 p{line-height: 5px;}
 
+#subdetail img{height: 488px; padding:5px;}
+
 </style>
 </head>
 <body>
@@ -386,15 +388,19 @@ p{line-height: 5px;}
 							</div>
 
 							<div>
-								<ul>
+							<ul>
 									<li><a
 										href="https://www.instagram.com/onesfit__official/?hl=ko"
 										onclick="window.open(this.href,'_blank'); return false;">
 											<img src="/img/instar.png" width="20px"
 											style="position: relative; top: 6px; border-radius: 9px">
-									</a> <a href="https://open.kakao.com/me/onesfit"><img
-											src="/img/kakao.png" width="20px"
-											style="position: relative; top: 6px; border-radius: 9px"></a>
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
 										<a
 										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
 										onclick="window.open(this.href,'_blank'); return false;"><img
@@ -451,15 +457,19 @@ p{line-height: 5px;}
 
 							<div>
 
-								<ul>
+							<ul>
 									<li><a
 										href="https://www.instagram.com/onesfit__official/?hl=ko"
-										onclick="window.open(this.href,'_blank'); return false;"><img
-											src="/img/instar.png" width="20px"
-											style="position: relative; top: 6px; border-radius: 9px"></a>
-										<a href="https://open.kakao.com/me/onesfit"><img
-											src="/img/kakao.png" width="20px"
-											style="position: relative; top: 6px; border-radius: 9px"></a>
+										onclick="window.open(this.href,'_blank'); return false;">
+											<img src="/img/instar.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
 										<a
 										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
 										onclick="window.open(this.href,'_blank'); return false;"><img
@@ -534,8 +544,7 @@ p{line-height: 5px;}
                   style="position: relative; bottom: 100px; text-align: center;">
                   <div id='subpic' style="position: relative; left: 40px;">
                      <c:forEach var='i' items='${idto }'>
-                        <div
-                           style="width: 500px; height: 500px; float: left; padding: 20px">
+                        <div style="width: 500px; height: 500px; float: left; padding: 20px">
                            <img src="/product/${i.product_seq}/${i.sysname }" style="width: 100%;">
                         </div>
                      </c:forEach>

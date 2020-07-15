@@ -249,21 +249,26 @@
                      </div>
 
                      <div>
-                        <ul>
-                           <li><a
-                              href="https://www.instagram.com/onesfit__official/?hl=ko"
-                              onclick="window.open(this.href,'_blank'); return false;">
-                                 <img src="/img/instar.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px">
-                           </a> <a href="https://open.kakao.com/me/onesfit"><img src="/img/kakao.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                              <a
-                              href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
-                              onclick="window.open(this.href,'_blank'); return false;"><img
-                                 src="/img/naver.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                           </li>
-                        </ul>
+                      <ul>
+									<li><a
+										href="https://www.instagram.com/onesfit__official/?hl=ko"
+										onclick="window.open(this.href,'_blank'); return false;">
+											<img src="/img/instar.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
+										<a
+										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
+										onclick="window.open(this.href,'_blank'); return false;"><img
+											src="/img/naver.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px"></a>
+									</li>
+								</ul>
 
 
                      </div>
@@ -314,17 +319,25 @@
                      <div>
 
                         <ul>
-                           <li><a
-                              href="https://www.instagram.com/onesfit__official/?hl=ko"
-                              onclick="window.open(this.href,'_blank'); return false;"><img
-                                 src="/img/instar.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                              <a href="https://open.kakao.com/me/onesfit"><img src="/img/kakao.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                                 <a href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"onclick="window.open(this.href,'_blank'); return false;" ><img src="/img/naver.png" width="20px"
-                                 style="position: relative; top: 6px; border-radius: 9px"></a>
-                           </li>
-                        </ul>
+									<li><a
+										href="https://www.instagram.com/onesfit__official/?hl=ko"
+										onclick="window.open(this.href,'_blank'); return false;">
+											<img src="/img/instar.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a> <a
+										href="https://open.kakao.com/me/onesfit"
+										onclick="window.open(this.href,'_blank'); return false;"
+										id='kakaotest'>
+											<img src="/img/kakao.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px">
+									</a>
+										<a
+										href="https://smartstore.naver.com/onesfit?NaPm=ct%3Dkccxj1zn%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D53dd1f37c78f4e235605b9617da325dbbf14a4a1"
+										onclick="window.open(this.href,'_blank'); return false;"><img
+											src="/img/naver.png" width="20px"
+											style="position: relative; top: 6px; border-radius: 9px"></a>
+									</li>
+								</ul>
 
 
                      </div>

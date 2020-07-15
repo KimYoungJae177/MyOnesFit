@@ -288,7 +288,7 @@ public class MemberController {
 		System.out.println(email);
 
 		int result = mservice.memberupdate(id,name,phone,zipcode,address1,address2,email);
-
+		session.setAttribute("loginInfo", mservice.mypage(id));
 		if(result>0) {
 			return "member/profileOk";
 		}else{
@@ -429,6 +429,9 @@ public class MemberController {
 	@RequestMapping("onlyBuy")
 	public String onlyBuy(int bseq,int price) {
 		mservice.onlyBuy(bseq,price);
+		String id = (String)session.getAttribute("loginid");
+		MemberDTO dto = mservice.mypage(id);
+		session.setAttribute("loginInfo", dto);
 		return "redirect:/member/tomyPage";
 	}
 	

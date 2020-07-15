@@ -266,7 +266,7 @@
                     	if(!checkEmpty){
                             if($("input[name=price]").val() != ""){
                             	
-                                if($("#textArea").val() != ""){
+                                if($("#summernote").val() != ""){
                                     if(document.getElementById("profile_pt").value != "" && $("#files").val() != ""){
                                     	
                                     	$(".number").each(function(){if($(this).val() == ""){numbercheck=false;}});	

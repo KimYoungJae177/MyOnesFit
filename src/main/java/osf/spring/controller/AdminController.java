@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -49,13 +51,13 @@ public class AdminController {
 		File folder = new File(filePath);
 
 		File[] folder_list = folder.listFiles(); // 파일리스트 얻어오기
-
+if(folder_list != null) {
 		for (int j = 0; j < folder_list.length; j++) {
 			folder_list[j].delete(); // 파일 삭제
 			System.out.println("파일이 삭제되었습니다.");
 
 		}
-
+}
 	}
 
 	public String filesUpload2(MultipartFile file, int seq) throws Exception {
@@ -78,8 +80,8 @@ public class AdminController {
 		File temp3 = new File(filePath);
 		if (!temp3.exists()) {
 			System.out.println(temp3);
+			temp3.mkdir();
 		}
-		temp3.mkdir();
 		if (!file.isEmpty()) {
 			String systemFileName = file.getOriginalFilename();
 			File targetLoc = new File(filePath + "/" + systemFileName);
@@ -90,16 +92,18 @@ public class AdminController {
 
 	}
 
-	public List<ProductImgDTO> filesUpload(MultipartFile[] files, int seq) throws Exception {
+	public List<ProductImgDTO> filesUpload(MultipartFile[] files2, int seq) throws Exception {
 		String filePath = session.getServletContext().getRealPath("upload/product/" + seq);
-
+		System.out.println("파일 경로 : " + filePath);
 		List<ProductImgDTO> pdto = new ArrayList<>();
 		File tempFilePath = new File(filePath);
+		System.out.println(tempFilePath.exists());
 		if (!tempFilePath.exists()) {
+			System.out.println("들어오나?");
 			tempFilePath.mkdir();
 		}
 
-		for (MultipartFile file : files) {
+		for (MultipartFile file : files2) {
 			if (!file.isEmpty()) {
 				String systemFileName = file.getOriginalFilename();
 				File targetLoc = new File(filePath + "/" + systemFileName);
@@ -115,6 +119,9 @@ public class AdminController {
 
 	@Autowired
 	private HttpSession session;
+	
+	@Autowired
+	private DataSourceTransactionManager txManager;
 
 	@RequestMapping("adminMain")
 	public String goAdminMain(Model model) {
@@ -227,6 +234,7 @@ public class AdminController {
 	}
 
 	@RequestMapping("productAddProc")
+	@Transactional("txManager")
 	public String productAdd(HttpServletRequest request, MultipartFile[] files2, MultipartFile file) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		String pname = request.getParameter("pname");
@@ -237,6 +245,7 @@ public class AdminController {
 		Map<String, String[]> map = new HashMap<>();
 		System.out.println("색상 개수는 : " + colors.length);
 		String[] count = null;
+
 		for (int i = 0; i < colors.length; i++) {
 			count = request.getParameterValues("count");
 			String color = colors[i];
@@ -248,10 +257,11 @@ public class AdminController {
 		int seq = aservice.getProductSequence();
 
 		String sysname = this.filesUpload2(file, seq);
+		System.out.println("상품번호가? " + seq);
 		List<ProductImgDTO> pdto = this.filesUpload(files2, seq);
 		aservice.addImg(pdto, seq);
 
-		int result = aservice.productAdd(pname, price, content, category, sysname);
+		aservice.productAdd(seq,pname, price, content, category, sysname);
 		
 			List<OptionDTO> odto = new ArrayList<>();
 			int index = 0;

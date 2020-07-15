@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -9,202 +9,222 @@
 <meta charset="UTF-8">
 <title>Admin BuyListManagement</title>
 <link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
+   href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+   rel="stylesheet" id="bootstrap-css">
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
+   src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+   crossorigin="anonymous"></script>
 
+<script>
+$(function(){
+	function dateFormat(argDate){
+
+        if(argDate !== undefined){
+			var a = argDate;
+			var setA = a.substring(0,16);
+
+        }
+
+        return setA;
+   }
+
+$(".date").each(function(){
+    			var date1 = $(this).html();
+    			var date2 = dateFormat(date1);
+    			$(this).html(date2);
+    		})
+})
+</script>
 
 <style>
 @import
-	url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-	;
+   url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+   ;
 
 * {
-	box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 .side-nav {
-	position: fixed;
-	top: 64px;
-	left: 225px;
-	width: 225px;
-	margin-left: -225px;
-	border: none;
-	border-radius: 0;
-	overflow-y: auto;
-	background-color: black;
-	bottom: 0;
+   position: fixed;
+   top: 64px;
+   left: 225px;
+   width: 225px;
+   margin-left: -225px;
+   border: none;
+   border-radius: 0;
+   overflow-y: auto;
+   background-color: black;
+   bottom: 0;
 }
 
 .side-nav>li>a {
-	width: 225px;
-	border-bottom: 1px rgba(0, 0, 0, .3) solid;
+   width: 225px;
+   border-bottom: 1px rgba(0, 0, 0, .3) solid;
 }
 
 .side-nav li a:hover, .side-nav li a:focus {
-	outline: none;
-	background-color: dimgrey;
+   outline: none;
+   background-color: dimgrey;
 }
 
 .side-nav li a {
-	color: white;
+   color: white;
 }
 
 #product_contents {
-	position: relative;
-	top: 120px;
-	left: 350px;
-	width: 1500px
+   position: relative;
+   top: 120px;
+   left: 350px;
+   width: 1500px
 }
 
 #radio {
-	position: relative;
-	top: 3px;
+   position: relative;
+   top: 3px;
 }
 
 .container {
-	width: 1200px;
-	height: 900px;
-	margin-left: 307px;
-	padding: 20px;
-	font-size: 12px;
+   width: 1200px;
+   height: 900px;
+   margin-left: 307px;
+   padding: 20px;
+   font-size: 12px;
 }
 
 #product_box {
-	background-color: #f6f6f6;
-	border: 1px solid #eeeeee;
+   background-color: #f6f6f6;
+   border: 1px solid #eeeeee;
 }
 
 .img_notice {
-	color: forestgreen;
+   color: forestgreen;
 }
 
 #img_title {
-	background-color: #f6f6f6;
+   background-color: #f6f6f6;
 }
 
 .xbox {
-	border: 1px dashed black;
-	width: 200px;
-	height: 200%;
+   border: 1px dashed black;
+   width: 200px;
+   height: 200%;
 }
 
 #submit {
-	width: 100px;
-	height: 30px;
-	border: 1px solid #c4c4c4;
-	background-color: rgba(266, 266, 266, 0);
-	color: #c4c4c4;
+   width: 100px;
+   height: 30px;
+   border: 1px solid #c4c4c4;
+   background-color: rgba(266, 266, 266, 0);
+   color: #c4c4c4;
 }
 
 #contents li {
-	list-style: none;
+   list-style: none;
 }
 
 #qnatable {
-	border: 1px solid #dfdfdf;
-	text-align: center;
-	width: 1000px;
-	font-size: 12px;
+   border: 1px solid #dfdfdf;
+   text-align: center;
+   width: 1000px;
+   font-size: 12px;
 }
 
 #qnatable  th {
-	text-align: center;
+   text-align: center;
 }
 
 #qnatable tr td {
-	border: 1px solid #dfdfdf;
+   border: 1px solid #dfdfdf;
 }
 
 #qnadiv {
-	padding-left: 290px;
+   padding-left: 290px;
 }
 
 #qnadiv table td a {
-	list-style: none;
-	color: black;
+   list-style: none;
+   color: black;
 }
 
 /* 댓글 */
 .chatBox {
-	overflow-y: auto;
-	word-wrap: break-word;
+   overflow-y: auto;
+   word-wrap: break-word;
 }
 
 .editor {
-	border: 1px solid #c4c4c4;
-	background-color: rgba(266, 266, 266, 0);
-	overflow: auto;
+   border: 1px solid #c4c4c4;
+   background-color: rgba(266, 266, 266, 0);
+   overflow: auto;
 }
 
 .hButton:hover {
-	background-color: gray;
+   background-color: gray;
 }
 
 /* 검색 */
 #selectBox {
-	border: 1px solid #dfdfdf;
+   border: 1px solid #dfdfdf;
 }
 
 #search {
-	border: 1px solid #dfdfdf;
+   border: 1px solid #dfdfdf;
 }
 </style>
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div style="color: white; margin-left: 18px;">
-			<h2>ADMIN</h2>
-		</div>
-		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-		<div>
-			<ul class="nav side-nav">
-				<li><a href="/admin/adminMain"><i class="fa fa-fw fa-star"></i>
-						DASH BOARD</a></li>
-				<li><a href="/">메인으로</a></li>
-				<li><a href="/admin/productAdmin"> 상품 관리 </a></li>
-				<li><a href="/admin/buyList"> 주문 관리 </a></li>
-				<li><a href="/admin/memberAdmin">회원 관리</a></li>
-				<li><a href="/admin/question">Q&A 관리</a></li>
-				<li><a href="/daily/daily_list?page=1">DAILY 게시판</a></li>
-				<li><a href="/notice/notice_list?page=1">공지사항 </a></li>
-				<li><a href="/admin/popup">팝업 관리</a></li>
-				<li><a href=""><i class="fa fa-fw fa fa-question-circle"></i>
-						판매자 정보</a></li>
-			</ul>
-		</div>
-	</nav>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div style="color: white; margin-left: 18px;">
+         <h2>ADMIN</h2>
+      </div>
+      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div>
+         <ul class="nav side-nav">
+            <li><a href="/admin/adminMain"><i class="fa fa-fw fa-star"></i>
+                  DASH BOARD</a></li>
+            <li><a href="/">메인으로</a></li>
+            <li><a href="/admin/productAdmin"> 상품 관리 </a></li>
+            <li><a href="/admin/buyList"> 주문 관리 </a></li>
+            <li><a href="/admin/memberAdmin">회원 관리</a></li>
+            <li><a href="/admin/question">Q&A 관리</a></li>
+            <li><a href="/daily/daily_list?page=1">DAILY 게시판</a></li>
+            <li><a href="/notice/notice_list?page=1">공지사항 </a></li>
+            <li><a href="/admin/popup">팝업 관리</a></li>
+            <li><a href=""><i class="fa fa-fw fa fa-question-circle"></i>
+                  판매자 정보</a></li>
+         </ul>
+      </div>
+   </nav>
 
 
-	<div style="margin-top: 60px;">
-		<h2
-			style="font-size: 14px; text-align: center; margin-top: 100px; margin-left: 230px;">
-			<b>BuyList</b>
-		</h2>
-	</div>
-	<br>
-	<br>
+   <div style="margin-top: 60px;">
+      <h2
+         style="font-size: 14px; text-align: center; margin-top: 100px; margin-left: 230px;">
+         <b>BuyList</b>
+      </h2>
+   </div>
+   <br>
+   <br>
 
-	<form action="/admin/buyList">
-		<select id="selectBox"
-			style="position: relative; top: 2px; margin-left: 1520px; margin-bottom: 10px; height: 25px;"
-			name="BuylistSelected">
-			<option value="bseq">주문번호</option>
-			<option value="parent_id">구매자 아이디</option>
-			<option value="status">상태</option>
-			<option value="send_money_yn">입금여부</option>
-		</select> &nbsp; <input id="search" type="text" name="input">&nbsp;
-		<button type="submit"
-			style="background-color: white; border: 1px solid #dfdfdf">
-			<img id="searchBtn" src="../resources/img/search.png"
-				style="width: 20px;">
-		</button>
-	</form>
-	<!-- <script type="text/javascript">
+   <form action="/admin/buyList">
+      <select id="selectBox"
+         style="position: relative; top: 2px; margin-left: 1520px; margin-bottom: 10px; height: 25px;"
+         name="BuylistSelected">
+         <option value="bseq">주문번호</option>
+         <option value="parent_id">구매자 아이디</option>
+         <option value="status">상태</option>
+         <option value="send_money_yn">입금여부</option>
+      </select> &nbsp; <input id="search" type="text" name="input">&nbsp;
+      <button type="submit"
+         style="background-color: white; border: 1px solid #dfdfdf">
+         <img id="searchBtn" src="../resources/img/search.png"
+            style="width: 20px;">
+      </button>
+   </form>
+   <!-- <script type="text/javascript">
       $("#searchBtn").on("click", function() {
          $(".answerB_write").css("display", "none");
 
@@ -437,5 +457,9 @@
 		})
 		
 	</script>
+
+
+
+
 </body>
 </html>

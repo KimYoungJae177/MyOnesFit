@@ -55,57 +55,7 @@ public class ProductController {
 	@Autowired
 	private HttpSession session;
 
-	@RequestMapping("productRegist")
-	public String productRegist() {
-		//		UUID uuid = UUID.randomUUID();
-		//		List<ImageDTO> imageList = new ArrayList<>();
-		//		
-		//		String filePath=session.getServletContext().getRealPath("upload/mainpic");
-		return "product/productRegist";
-	}
 
-	@RequestMapping("productRegistComplete")
-	public String productRegistComplete(ProductDTO pdto,MultipartFile file,ImagesDTO images)throws Exception {		
-		int pseq = pdao.getNextVal();
-		UUID uuid = UUID.randomUUID();
-		List<ImageDTO> imageList = new ArrayList<>();
-		System.out.println(pdto.getPname()+" : "+pdto.getPrice()+" : "+pdto.getContent());
-		String filePath=session.getServletContext().getRealPath("upload/product/title");
-		String filePath2=session.getServletContext().getRealPath("upload/product/"+pseq);
-		pdto.setPname(pdto.getPname().replaceAll("<", "&lt"));
-		pdto.setContent(pdto.getContent().replaceAll("<", "&lt"));
-		File folder1=new File(filePath);
-		File folder2=new File(filePath2);
-		if(!folder1.exists()) {
-			folder1.mkdirs();
-		}
-		if(!folder2.exists()) {
-			folder2.mkdirs();
-		}
-
-		String sysFileName=uuid+"_"+file.getOriginalFilename();
-		pdto.setTitle_img(sysFileName);
-		File targetLoc = new File(filePath+"/"+sysFileName);
-		file.transferTo(targetLoc);
-
-		if(images.getImages().length !=0) {			
-			for(MultipartFile f : images.getImages()) {
-				if(!f.isEmpty()) {
-					ImageDTO dto = new ImageDTO();
-					dto.setOriname(f.getOriginalFilename());
-					String sysFileName2=uuid+"_"+f.getOriginalFilename();
-					File targetLoc2 = new File(filePath2 + "/" +sysFileName2);
-					f.transferTo(targetLoc2);
-					dto.setSysname(sysFileName2);
-					imageList.add(dto);
-				}
-			}
-		}
-		pdto.setPseq(pseq);
-		pservice.productRegist(pdto, imageList);
-
-		return "redirect:/";
-	}
 
 	@RequestMapping(value="productDetail", method=RequestMethod.GET)
 	public String productDetail(HttpServletRequest request,Model model)throws Exception{
@@ -115,6 +65,7 @@ public class ProductController {
 		ProductDTO pdto = pservice.productSelectByPseq(pseq);
 //		MemberDTO mdto = (MemberDTO)session.getAttribute("loginInfo");
 		List<ImageDTO> idto = pservice.ImageSelectByPseq(pseq);
+		System.out.println("pseq 는 : " +pseq);
 		List<OptionDTO> options = pservice.optionSelect(pseq);
 		HashSet<String> color = new HashSet<String>();		
 

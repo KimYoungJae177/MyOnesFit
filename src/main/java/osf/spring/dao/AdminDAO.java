@@ -51,8 +51,9 @@ public class AdminDAO {
 		return mybatis.selectList("admin.getProduct");
 	}
 
-	public int productAdd(String pname,int price,String content, String category,String sysname) {
+	public int productAdd(int product_seq,String pname,int price,String content, String category,String sysname) {
 		Map<String,String> param = new HashMap();
+		param.put("product_seq", ""+product_seq);
 		param.put("pname", pname);
 		param.put("price", ""+price);
 		param.put("content", content);
@@ -67,13 +68,10 @@ public class AdminDAO {
 
 	public int getProductSequence() {
 		int num;
-		try {
-			num = mybatis.selectOne("admin.getSequence");
-		}catch(Exception e) {
-			num = 1000;
-		}
 
-		return num+1;
+			num = mybatis.selectOne("admin.getSequence");
+
+		return num;
 	}
 
 	public void addImg(List<ProductImgDTO> pdto,int seq) {
@@ -166,7 +164,7 @@ public class AdminDAO {
 	/////////////////////영재씨파트 ////////////////////////////////
 	//buyList
 		public List<BuyListDTO> selectByPageNo(Map<String, Object> selectParamBuylist){
-			return mybatis.selectList("admin.selectList", selectParamBuylist);		
+			return mybatis.selectList("admin.selectList", selectParamBuylist);
 		}
 		
 		public int getArticleCount() {
@@ -221,9 +219,13 @@ public class AdminDAO {
 		public List<Integer> visit() {
 			return mybatis.selectList("admin.visit");
 		}
-
 		public int pupupDelete(int popup_seq) {
 			return mybatis.delete("admin.pupupDelete", popup_seq);
+		}
+
+		public void deleteImg(int seq) {
+			// TODO Auto-generated method stub
+			
 		}
 
 

@@ -96,8 +96,7 @@
 		locketlist
 	</select>
 
-	<select id="getUseMoney" resultType="int">select nvl(sum(price),0)
-		from buy_list where parent_id=#{value}
+	<select id="getUseMoney" resultType="int">select nvl(sum(amount),0) from order_bill where id=#{value}
 	</select>
 
 	<select id="orderList" resultType="osf.spring.dto.BuyListDTO">select * from buy_list where

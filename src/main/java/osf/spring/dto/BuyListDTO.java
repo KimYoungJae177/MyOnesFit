@@ -20,7 +20,7 @@ public class BuyListDTO {
    private int product_num;
    private Timestamp buy_date;
    private String send_money_yn;
-   private int send_number;
+   private long send_number;
    private int addpoint;
    private int oseq;
    
@@ -28,7 +28,7 @@ public class BuyListDTO {
 
 public BuyListDTO(int bseq, String parent_id, String pname, int price, String psize, String pcolor, int amount,
 		String recipient, int zipcode, String address1, String address2, String phone, String msg, String status,
-		int product_num, Timestamp buy_date, String send_money_yn, int send_number, int addpoint, int oseq) {
+		int product_num, Timestamp buy_date, String send_money_yn, long send_number, int addpoint, int oseq) {
 	super();
 	this.bseq = bseq;
 	this.parent_id = parent_id;
@@ -188,11 +188,11 @@ public void setSend_money_yn(String send_money_yn) {
 	this.send_money_yn = send_money_yn;
 }
 
-public int getSend_number() {
+public long getSend_number() {
 	return send_number;
 }
 
-public void setSend_number(int send_number) {
+public void setSend_number(long send_number) {
 	this.send_number = send_number;
 }
 

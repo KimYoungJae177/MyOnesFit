@@ -139,6 +139,7 @@ border: 1px solid #dfdfdf;
                  }
               })
               
+            
           $(".date").each(function(){
     			var date1 = $(this).html();
     			var date2 = dateFormat(date1);
