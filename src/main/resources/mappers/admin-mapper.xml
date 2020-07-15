@@ -1,144 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="admin">
-<select id="getMembers" resultType="osf.spring.dto.MemberDTO">select * from member</select>
+	<select id="getMembers" resultType="osf.spring.dto.MemberDTO">select * from member</select>
 
-<delete id="memberDelete">delete from member where id=#{value}</delete>
+	<delete id="memberDelete">delete from member where id=#{value}</delete>
 
-<update id="memberBlack">update member set blacklist_yn='Y' where id=#{value}</update>
+	<update id="memberBlack">update member set blacklist_yn='Y' where id=#{value}
+	</update>
 
-<update id="unBlack">update member set blacklist_yn='N' where id=#{value}</update>
+	<update id="unBlack">update member set blacklist_yn='N' where id=#{value}
+	</update>
 
-<update id="updatePoint">update member set point=${point} where id=#{id}</update>
+	<update id="updatePoint">update member set point=${point} where id=#{id}
+	</update>
 
 
-<insert id="addProduct">insert into product values(product_seq.nextval,#{pname},${price},#{category},default,#{content},#{img},default,default,default)</insert>
+	<insert id="addProduct">insert into product
+		values(product_seq.nextval,#{pname},${price},#{category},default,#{content},#{img},default,default,default)
+	</insert>
 
-<insert id="addImg">insert into product_img values(${img_seq},#{oriName},#{sysName})</insert>
+	<insert id="addImg">insert into product_img
+		values(${img_seq},#{oriName},#{sysName})
+	</insert>
+
+	<select id="getSequence" resultType="int">select max(pseq) from
+		product
+	</select>
+
+	<select id="getProduct" resultType="osf.spring.dto.ProductDTO">select * from product order
+		by pseq
+	</select>
+
+	<select id="productDetail"
+		resultType="osf.spring.dto.ProductDTO">select * from product where pseq=#{value}</select>
+
+	<insert id="addOption">insert into product_option
+		values(${parent_seq},#{color},#{psize},${item_count})
+	</insert>
+
+	<delete id="productDelete">delete from product where pseq=${value}</delete>
+
+	<select id="getImg" resultType="String">select sysname from product_img
+		where product_seq=${value}
+	</select>
+
+	<delete id="deleteImg">delete from product_img where product_seq=${value}
+	</delete>
+
+	<delete id="deleteOption">delete from product_option where parent_seq=${value}
+	</delete>
+
+	<update id="productModify">update product set pname=#{pname}, price=${price},
+		content=#{content}, category=#{category}, title_img=#{img} where
+		pseq=${pseq}
+	</update>
+
+	<select id="getOption" resultType="osf.spring.dto.OptionDTO">select * from product_option
+		where parent_seq=${value}
+	</select>
+
+	<select id="getSales" resultType="Integer">
+		select * from(select
+		sum(price),1 sort from buy_list where
+		trunc(buy_date,'MM')=trunc(sysdate,'MM') group by 1
+		union select
+		sum(price),2 sort from buy_list where
+		trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -1),'MM') group by 2
+		union select sum(price),3 sort from buy_list where
+		trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -2),'MM') group by 3
+		union select sum(price),4 sort from buy_list where
+		trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -3),'MM') group by 4
+		union select nvl(sum(price),0),5 from buy_list where
+		trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -4),'MM') group by 5)
+		order by sort
+	</select>
+
+	<select id="totalSale" resultType="int">select nvl(sum(price),0) from
+		buy_list
+	</select>
+
+	<select id="itemRank" resultType="osf.spring.dto.BestProductDTO">select * from (select
+		product_num,sum(price) as price,rank() OVER (ORDER BY sum(price) DESC)
+		rank from buy_list b group by rollup(product_num) HAVING
+		GROUPING_ID(product_num) IN (0, 2))where rank between 1 and 10
+	</select>
+
+	<select id="bestProduct" resultType="osf.spring.dto.ProductDTO">select * from product where
+		pseq=${value}
+	</select>
+
+	<update id="setBest">update product set best='Y' where pseq=${value}
+	</update>
+
+	<select id="visit" resultType="Integer">select
+		* from(select nvl(count(*),0),1 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(sysdate,'MM')]]>
+		union select nvl(count(*),0),2 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -1),'MM')]]>
+		union select nvl(count(*),0),3 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -2),'MM')]]>
+		union select nvl(count(*),0),4 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -3),'MM')]]>
+		union select nvl(count(*),0),5 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -4),'MM')]]>)
+		order by sort
+	</select>
+
+	<update id="unBest">update product set best='N' where pseq=${value}
+	</update>
+
+
+	<!-- 영재씨파트 -->
+
+	<!-- buy_list -->
+	<select id="selectList" resultType="osf.spring.dto.BuyListDTO">
+		select * from buy_list
+		<choose>
+			<when test="BuylistSelected != null">
+				where ${BuylistSelected} = #{input}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+		order by bseq desc
+	</select>
+
+	<update id="updateWhenStatusN">
+		update buy_list set status =
+		'입금전', send_number = 0 ,
+		send_money_yn = 'N' where bseq = #{bseq}
+	</update>
+
+	<update id="updateWhenStatusY0">
+		update buy_list set status = '입금완료/배송준비중',
+		send_money_yn = 'Y' where bseq = #{bseq}
+	</update>
+
+	<update id="updateWhenStatusYX">
+		update buy_list set status = '배송중', send_number =
+		#{send_number} where bseq = #{bseq}
+	</update>
 	
-	<select id="getSequence" resultType="int">select max(pseq) from product</select>
-
-<select id="getProduct" resultType="osf.spring.dto.ProductDTO">select * from product order by pseq</select>
-
- <select id="productDetail" resultType="osf.spring.dto.ProductDTO">select * from product where pseq=#{value}</select>
-
-<insert id="addOption">insert into product_option values(${parent_seq},#{color},#{psize},${item_count})</insert>
-
-<delete id="productDelete">delete from product where pseq=${value}</delete>
-
-<select id="getImg" resultType="String">select sysname from product_img where product_seq=${value}</select>
- 
- <delete id="deleteImg">delete from product_img where product_seq=${value}</delete>
- 
- <delete id="deleteOption">delete from product_option where parent_seq=${value}</delete>
- 
- <update id="productModify">update product set pname=#{pname}, price=${price}, content=#{content}, category=#{category}, title_img=#{img} where pseq=${pseq} </update>
- 
- <select id="getOption" resultType="osf.spring.dto.OptionDTO">select * from product_option where parent_seq=${value}</select>
- 
- <select id="getSales" resultType="Integer">
- select * from(select sum(price),1 sort from buy_list where trunc(buy_date,'MM')=trunc(sysdate,'MM') group by 1
-union select sum(price),2 sort from buy_list where trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -1),'MM') group by 2
-union select sum(price),3 sort from buy_list where trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -2),'MM') group by 3
-union select sum(price),4 sort from buy_list where trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -3),'MM') group by 4
-union select nvl(sum(price),0),5 from buy_list where trunc(buy_date,'MM')=trunc(ADD_MONTHS(sysdate, -4),'MM') group by 5) order by sort</select>
-
-<select id="totalSale" resultType="int">select nvl(sum(price),0) from buy_list</select>
-
-<select id="itemRank" resultType="osf.spring.dto.BestProductDTO">select * from (select product_num,sum(price) as price,rank() OVER (ORDER BY sum(price) DESC) rank from buy_list b group by rollup(product_num) HAVING GROUPING_ID(product_num) IN (0, 2))where rank between 1 and 10</select>
-
-<select id="bestProduct" resultType="osf.spring.dto.ProductDTO">select * from product where pseq=${value}</select>
-
-<update id="setBest">update product set best='Y' where pseq=${value}</update>
-
-<select id="visit" resultType="Integer">select * from(select nvl(count(*),0),1 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(sysdate,'MM')]]>
-union select nvl(count(*),0),2 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -1),'MM')]]>
-union select nvl(count(*),0),3 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -2),'MM')]]>
-union select nvl(count(*),0),4 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -3),'MM')]]>
-union select nvl(count(*),0),5 sort from visit where <![CDATA[trunc(vdate,'MM')<=trunc(ADD_MONTHS(sysdate, -4),'MM')]]>) order by sort</select>
-
-<update id="unBest">update product set best='N' where pseq=${value}</update>
-
-
-<!--                                    영재씨파트                                                           -->
-
- <!-- buy_list -->
-   <select id="selectList" resultType="osf.spring.dto.BuyListDTO">
-      select * from buy_list
-      <choose>
-         <when test="BuylistSelected != null">
-            where ${BuylistSelected} = #{input}
-         </when>
-         <otherwise>
-         </otherwise>
-      </choose>
-      order by bseq desc
-   </select>
-
-   <update id="updateWhenStatusN">
-      update buy_list set status =
-      '입금전', send_number = 0 ,
-      send_money_yn = 'N' where bseq = #{bseq}
-   </update>
-
-   <update id="updateWhenStatusY0">
-      update buy_list set status = '입금완료/배송준비중',
-      send_money_yn = 'Y' where bseq = #{bseq}
-   </update>
-
-   <update id="updateWhenStatusYX">
-      update buy_list set status = '배송중', send_number =
-      #{send_number} where bseq = #{bseq}
-   </update>
+	<delete id="buyListDelete">
+		delete from buy_list where bseq = #{bseq}
+	</delete>
 
 
 
-   <!-- question -->
-   <select id="qSelectAll" resultType="osf.spring.dto.QuestionDTO">
-      select * from question
-      <choose>
-         <when test="questionSelected != null">
-            where ${questionSelected} = #{input}
-         </when>
-         <otherwise>
-         </otherwise>
-      </choose>
-      order by bno desc
-   </select>
-   <update id="answerUpdate">
-      update question set answer_yn = 'Y' where bno =
-      ${parent_bno}
-   </update>
+	<!-- question -->
+	<select id="qSelectAll" resultType="osf.spring.dto.QuestionDTO">
+		select * from question
+		<choose>
+			<when test="questionSelected != null">
+				where ${questionSelected} = #{input}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+		order by bno desc
+	</select>
+	<update id="answerUpdate">
+		update question set answer_yn = 'Y' where bno =
+		${parent_bno}
+	</update>
 
 
-   <!-- answer -->
-   <insert id="answerInput">
-      insert into answer values(answer_seq.nextval,
-      ${parent_bno}, #{contents})
-   </insert>
+	<!-- answer -->
+	<insert id="answerInput">
+		insert into answer values(answer_seq.nextval,
+		${parent_bno}, #{contents})
+	</insert>
 
 
 
-   <!-- popup -->
-   <insert id="popupInsert">
-      insert into popup
-      values(popup_seq.nextval, #{title},
-      #{sysFileName}, default)
-   </insert>
-   <select id="selectPopupByPage"
-      resultType="osf.spring.dto.PopupDTO">
-      select * from popup
-   </select>
+	<!-- popup -->
+	<insert id="popupInsert">
+		insert into popup
+		values(popup_seq.nextval, #{title},
+		#{sysFileName}, default)
+	</insert>
+	<select id="selectPopupByPage"
+		resultType="osf.spring.dto.PopupDTO">
+		select * from popup
+	</select>
 
-   <update id="popupShowUpdate">
-      update popup set show_yn = #{show_yn} where popup_seq
-      = ${popup_seq}
-   </update>
+	<update id="popupShowUpdate">
+		update popup set show_yn = #{show_yn} where popup_seq
+		= ${popup_seq}
+	</update>
 
-   <select id="selectPopupByY" resultType="osf.spring.dto.PopupDTO">
-      select * from popup where
-      show_yn = 'Y'
-   </select>
+	<select id="selectPopupByY" resultType="osf.spring.dto.PopupDTO">
+		select * from popup where
+		show_yn = 'Y'
+	</select>
+
+	<delete id="pupupDelete">
+		delete from popup where popup_seq =
+		#{popup_seq}
+	</delete>
 
 
 </mapper>

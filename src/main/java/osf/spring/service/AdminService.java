@@ -153,6 +153,11 @@ public class AdminService {
 			return adao.updateWhenStatusYX(updateParam);
 			
 		}
+		
+		public Object buyListDelete(int bseq) {
+			return adao.buyListDelete(bseq);
+			
+		}
 
 		
 		//question
@@ -187,6 +192,13 @@ public class AdminService {
 		public List<Integer> visit() {
 			return adao.visit();
 		}
+
+		public int pupupDelete(int popup_seq) {
+			return adao.pupupDelete(popup_seq);
+			
+		}
+
+	
 
 	
 }

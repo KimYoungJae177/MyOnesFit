@@ -184,6 +184,11 @@ public class AdminDAO {
 		public Object updateWhenStatusYX(Map<String, Object> updateParam) {
 			return mybatis.update("admin.updateWhenStatusYX", updateParam);
 		}
+		
+
+		public Object buyListDelete(int bseq) {
+			return mybatis.delete("admin.buyListDelete", bseq);
+		}
 
 		
 		//Question
@@ -216,6 +221,11 @@ public class AdminDAO {
 		public List<Integer> visit() {
 			return mybatis.selectList("admin.visit");
 		}
+
+		public int pupupDelete(int popup_seq) {
+			return mybatis.delete("admin.pupupDelete", popup_seq);
+		}
+
 
 	
 }

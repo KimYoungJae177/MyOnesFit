@@ -355,6 +355,14 @@ public class AdminController {
 		}
 		return updateParam;
 	}
+	
+	@RequestMapping("buyListDelete")
+	public Object buyListDelete(int bseq) {
+		aservice.buyListDelete(bseq);
+		return "admin/buylist";
+	}
+	
+	
 
 	// questionAnswer
 
@@ -417,14 +425,18 @@ public class AdminController {
 	}
 
 	@RequestMapping("popupShow")
-	@ResponseBody
 	public Object popupShowUpdate(int popup_seq, String show_yn) {
 		Map<String, Object> popupShow_ynUpdate = new HashMap<>();
 		popupShow_ynUpdate.put("popup_seq", popup_seq);
 		popupShow_ynUpdate.put("show_yn", show_yn);
-		System.out.println("con :" + popup_seq + ":" + show_yn);
 		aservice.popupShowUpdate(popupShow_ynUpdate);
-		return popupShow_ynUpdate;
+		return "admin/popup";
+	}
+	
+	@RequestMapping("pupupDelete")
+	public Object pupupDelete(int popup_seq) {
+		aservice.pupupDelete(popup_seq);		
+		return "admin/popup";
 	}
 
 	

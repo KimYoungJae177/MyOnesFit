@@ -157,27 +157,27 @@
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div style="color: white; margin-left: 18px;">
-					<h2>ADMIN</h2>
-				</div>
-				<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-				<div>
-					<ul class="nav side-nav">
-						<li><a href="/admin/adminMain"><i
-								class="fa fa-fw fa-star"></i> DASH BOARD</a></li>
-						<li><a href="/">메인으로</a></li>
-						<li><a href="/admin/productAdmin"> 상품 관리 </a></li>
-						<li><a href="/admin/buyList"> 주문 관리 </a></li>
-						<li><a href="/admin/memberAdmin">회원 관리</a></li>
-						<li><a href="/admin/question">Q&A 관리</a></li>
-						<li><a href="/daily/daily_list?page=1">DAILY 게시판</a></li>
-						<li><a href="/notice/notice_list?page=1">공지사항 </a></li>
-						<li><a href="/admin/popup">팝업 관리</a></li>
-						<li><a href=""><i class="fa fa-fw fa fa-question-circle"></i>
-								판매자 정보</a></li>
-					</ul>
-				</div>
-			</nav>
+		<div style="color: white; margin-left: 18px;">
+			<h2>ADMIN</h2>
+		</div>
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div>
+			<ul class="nav side-nav">
+				<li><a href="/admin/adminMain"><i class="fa fa-fw fa-star"></i>
+						DASH BOARD</a></li>
+				<li><a href="/">메인으로</a></li>
+				<li><a href="/admin/productAdmin"> 상품 관리 </a></li>
+				<li><a href="/admin/buyList"> 주문 관리 </a></li>
+				<li><a href="/admin/memberAdmin">회원 관리</a></li>
+				<li><a href="/admin/question">Q&A 관리</a></li>
+				<li><a href="/daily/daily_list?page=1">DAILY 게시판</a></li>
+				<li><a href="/notice/notice_list?page=1">공지사항 </a></li>
+				<li><a href="/admin/popup">팝업 관리</a></li>
+				<li><a href=""><i class="fa fa-fw fa fa-question-circle"></i>
+						판매자 정보</a></li>
+			</ul>
+		</div>
+	</nav>
 
 
 	<div style="margin-top: 60px;">
@@ -229,6 +229,9 @@
 								<td><input type="button" value="수정"
 									class="btn btn-outline-secondary pbtn"
 									style="width: 70px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white;">
+									<input type="button" value="삭제"
+									class="btn btn-outline-secondary dbtn"
+									style="width: 70px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white;">
 							</tr>
 						</c:forEach>
 					</c:when>
@@ -243,10 +246,10 @@
 		</table>
 		<input type="button" value="팝업등록" id="popupInput"
 			class="btn btn-outline-secondary"
-			style="width: 70px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white;margin-left: 1225px; margin-top: 10px">
+			style="width: 70px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white; margin-left: 1225px; margin-top: 10px">
 	</div>
 	<script type="text/javascript">
-		$("#popupInput").on("click", function(){
+		$("#popupInput").on("click", function() {
 			location.href = "/admin/popupInsertPage";
 		})
 	</script>
@@ -257,7 +260,6 @@
 
 			$.ajax({
 				url : "/admin/popupShow",
-				dataType : "Json",
 				data : {
 					popup_seq : popup_seq,
 					show_yn : show_yn
@@ -265,6 +267,23 @@
 			}).done(function(resp) {
 				alert("수정 성공");
 			})
+		})
+	</script>
+	<script>
+		$(".dbtn").on("click", function() {
+			var popup_seq = $(this).closest("tr").find("td").eq("0").text();
+			var check = confirm("정말 삭제하시겠습니까?");
+			if (check) {
+				$.ajax({
+					url : "/admin/pupupDelete",
+					data : {
+						popup_seq : popup_seq
+					}
+				}).done(function(resp) {
+					alert("삭제완료");
+					location.reload();
+				})
+			}
 		})
 	</script>
 </body>

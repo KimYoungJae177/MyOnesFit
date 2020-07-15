@@ -317,7 +317,8 @@
 										<c:otherwise>
 										</c:otherwise>
 									</c:choose>
-								<td><input type="button" class="modify" value="수정">
+								<td><input type="button" class="btn btn-outline-secondary modify" value="수&nbsp;&nbsp;정" style="width: 74px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white;">
+								<input type="button" id="delete" class="btn btn-outline-secondary" value="주문취소" style="margin-top: 5px; height: 28px; font-size: 12px; border: 1px solid #dfdfdf; background-color: white;">
 							</tr>
 						</c:forEach>
 					</c:when>
@@ -416,6 +417,25 @@
 						}
 					}
 				})
+	</script>
+	<script type="text/javascript">
+		$("#delete").on("click", function(){
+			var bseq = $(this).closest("tr").find("td").eq("0").html();
+			var check = confirm("정말 삭제하시겠습니까?");
+			if(check){
+				$.ajax({
+					url : "/admin/buyListDelete",
+					data :{
+						bseq : bseq
+					}
+				}).done(function(resp){
+					alert("삭제완료");
+					location.reload();
+				})
+			}
+			
+		})
+		
 	</script>
 </body>
 </html>
