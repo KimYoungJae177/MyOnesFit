@@ -51,13 +51,13 @@ public class AdminController {
 		File folder = new File(filePath);
 
 		File[] folder_list = folder.listFiles(); // 파일리스트 얻어오기
-if(folder_list != null) {
-		for (int j = 0; j < folder_list.length; j++) {
-			folder_list[j].delete(); // 파일 삭제
-			System.out.println("파일이 삭제되었습니다.");
+		if (folder_list != null) {
+			for (int j = 0; j < folder_list.length; j++) {
+				folder_list[j].delete(); // 파일 삭제
+				System.out.println("파일이 삭제되었습니다.");
 
+			}
 		}
-}
 	}
 
 	public String filesUpload2(MultipartFile file, int seq) throws Exception {
@@ -119,7 +119,7 @@ if(folder_list != null) {
 
 	@Autowired
 	private HttpSession session;
-	
+
 	@Autowired
 	private DataSourceTransactionManager txManager;
 
@@ -162,8 +162,7 @@ if(folder_list != null) {
 	}
 
 	@RequestMapping("productModifyProc")
-	public String productModify(HttpServletRequest request, MultipartFile[] files2, MultipartFile file)
-			throws Exception {
+	public String productModify(HttpServletRequest request, MultipartFile[] files2, MultipartFile file) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		String pname = request.getParameter("pname");
 		int price = Integer.parseInt(request.getParameter("price"));
@@ -261,22 +260,22 @@ if(folder_list != null) {
 		List<ProductImgDTO> pdto = this.filesUpload(files2, seq);
 		aservice.addImg(pdto, seq);
 
-		aservice.productAdd(seq,pname, price, content, category, sysname);
-		
-			List<OptionDTO> odto = new ArrayList<>();
-			int index = 0;
-			for (String key : map.keySet()) {
-				String[] list = map.get(key);
+		aservice.productAdd(seq, pname, price, content, category, sysname);
 
-				for (int i = 0; i < list.length; i++) {
-					System.out.println(key);
-					System.out.println(list[i]);
-					System.out.println(count[index]);
-					odto.add(new OptionDTO(seq, key, list[i], Integer.parseInt(count[index])));
-				}
-				index++;
+		List<OptionDTO> odto = new ArrayList<>();
+		int index = 0;
+		for (String key : map.keySet()) {
+			String[] list = map.get(key);
+
+			for (int i = 0; i < list.length; i++) {
+				System.out.println(key);
+				System.out.println(list[i]);
+				System.out.println(count[index]);
+				odto.add(new OptionDTO(seq, key, list[i], Integer.parseInt(count[index])));
 			}
-			aservice.addOption(odto);
+			index++;
+		}
+		aservice.addOption(odto);
 
 		return "redirect:/admin/adminMain";
 	}
@@ -335,6 +334,10 @@ if(folder_list != null) {
 	// buyList
 	@RequestMapping("/buyList")
 	public String buyList(HttpServletRequest req, Model model, String BuylistSelected, String input) throws Exception {
+		if (input == "") {
+			input = null;
+		}
+
 		Map<String, Object> selectParamBuylist = new HashMap<>();
 		selectParamBuylist.put("BuylistSelected", BuylistSelected);
 		selectParamBuylist.put("input", input);
@@ -346,9 +349,9 @@ if(folder_list != null) {
 	@RequestMapping("BuyListUpdate")
 	@ResponseBody
 	public Object BuyListModify(int bseq, String status, String send_money_yn, long send_number) {
-		
+
 		/* System.out.println(bseq + status + send_money_yn + send_number); */
-		
+
 		Map<String, Object> updateParam = new HashMap<>();
 		updateParam.put("bseq", bseq);
 		updateParam.put("status", status);
@@ -365,20 +368,20 @@ if(folder_list != null) {
 		}
 		return updateParam;
 	}
-	
+
 	@RequestMapping("buyListDelete")
 	public Object buyListDelete(int bseq) {
 		aservice.buyListDelete(bseq);
 		return "admin/buylist";
 	}
-	
-	
 
 	// questionAnswer
 
 	@RequestMapping("question")
-	public String question(HttpServletRequest req, Model model, String questionSelected, String input)
-			throws Exception {
+	public String question(HttpServletRequest req, Model model, String questionSelected, String input) throws Exception {
+		if (input == "") {
+			input = null;
+		}
 		Map<String, Object> updateParamQuestion = new HashMap<>();
 		updateParamQuestion.put("questionSelected", questionSelected);
 		updateParamQuestion.put("input", input);
@@ -442,13 +445,11 @@ if(folder_list != null) {
 		aservice.popupShowUpdate(popupShow_ynUpdate);
 		return "admin/popup";
 	}
-	
+
 	@RequestMapping("pupupDelete")
 	public Object pupupDelete(int popup_seq) {
-		aservice.pupupDelete(popup_seq);		
+		aservice.pupupDelete(popup_seq);
 		return "admin/popup";
 	}
-
-	
 
 }

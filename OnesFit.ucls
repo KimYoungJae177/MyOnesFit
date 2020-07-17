@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="osf.spring.controller.HomeController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="113" x="2622" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="osf.spring.controller.DailyLookCommentsController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/DailyLookCommentsController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="163" width="197" x="807" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="osf.spring.controller.DailyLookController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/DailyLookController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="243" x="1055" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="osf.spring.controller.AdminController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/AdminController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="301" x="2775" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="osf.spring.controller.NoticeBoardController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/NoticeBoardController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="151" x="1338" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="osf.spring.controller.ProductController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/ProductController.java" binary="false" corner="TOP_LEFT">    
+    <position height="195" width="345" x="2190" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="osf.spring.controller.MemberController" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/MemberController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="173" x="1680" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="osf.spring.controller.ExceptionContreoller" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/controller/ExceptionContreoller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="143" x="276" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="osf.spring.dao.ProductDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/ProductDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="94" x="2230" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="osf.spring.dao.DailyLookCommentsDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/DailyLookCommentsDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="166" x="804" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="osf.spring.dao.NoticeBoardDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/NoticeBoardDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="119" x="1246" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="osf.spring.dao.MemberDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/MemberDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="199" width="159" x="1526" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="osf.spring.dao.DailyLookDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/DailyLookDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="104" x="1052" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="osf.spring.dao.AdminDAO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dao/AdminDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="221" width="112" x="2804" y="628"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="osf.spring.service.DailyLookCommentsService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/DailyLookCommentsService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="184" x="807" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="osf.spring.service.DailyLookService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/DailyLookService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="122" x="1055" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="osf.spring.service.NoticeService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/NoticeService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="135" x="1246" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="osf.spring.service.AdminService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/AdminService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="144" width="162" x="2775" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="osf.spring.service.ProductService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/ProductService.java" binary="false" corner="TOP_LEFT">    
+    <position height="242" width="157" x="2230" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="osf.spring.service.MemberService" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/service/MemberService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="239" width="197" x="1720" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="osf.spring.aop.AdminAdvisor" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/aop/AdminAdvisor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="150" x="617" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="osf.spring.aop.BlockingAspect" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/aop/BlockingAspect.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="269" width="192" x="44" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="osf.spring.dto.MemberDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/MemberDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="143" x="1748" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="osf.spring.dto.QuestionDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/QuestionDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="99" x="2764" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="osf.spring.dto.ReviewDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/ReviewDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="89" x="2190" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="osf.spring.dto.LocketListDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/LocketListDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="108" x="1463" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="osf.spring.dto.PopupDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/PopupDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="92" x="3358" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="osf.spring.dto.NoticeBoardDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/NoticeBoardDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="118" x="459" y="37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="osf.spring.dto.ImageDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/ImageDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="87" x="2063" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="osf.spring.dto.DailyLookDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/DailyLookDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="103" x="1177" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="osf.spring.dto.BuyListDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/BuyListDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="125" x="2319" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="osf.spring.dto.DailyLookCommentsDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/DailyLookCommentsDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="170" x="967" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="osf.spring.dto.OrderBillDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/OrderBillDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="103" x="1320" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="osf.spring.dto.AnswerDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/AnswerDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="97" x="2484" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="osf.spring.dto.BestProductDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/BestProductDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="124" x="3035" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="osf.spring.dto.ProductImgDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/ProductImgDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="119" x="3199" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="osf.spring.dto.ProductDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/ProductDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="103" x="2621" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="osf.spring.dto.OrderDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/OrderDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="92" x="1931" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="osf.spring.dto.CartDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/CartDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="97" x="1611" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="osf.spring.dto.OptionDTO" project="OnesFit" 
+    file="/OnesFit/src/main/java/osf/spring/dto/OptionDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="92" x="2903" y="893"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <association id="41">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="42" name="dservice"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="44">    
+    <bendpoint x="2094" y="346"/>    
+    <bendpoint x="2094" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="45">    
+    <bendpoint x="2731" y="346"/>    
+    <bendpoint x="2731" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="46">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="47">    
+    <bendpoint x="1207" y="346"/>    
+    <bendpoint x="1207" y="628"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="48">    
+    <bendpoint x="2647" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <association id="49">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="50" name="dcservice"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="52">    
+    <bendpoint x="3114" y="346"/>    
+    <bendpoint x="3114" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="53">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <association id="54">    
+    <bendpoint x="2199" y="346"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="55" name="pdao"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="57">    
+    <bendpoint x="2459" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="58">    
+    <bendpoint x="2199" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="59">    
+    <bendpoint x="3051" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="60">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="61">    
+    <bendpoint x="3030" y="346"/>    
+    <bendpoint x="3030" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="62">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="63">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="64" name="aservice"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="66">    
+    <bendpoint x="1000" y="628"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="67">    
+    <bendpoint x="2073" y="346"/>    
+    <bendpoint x="2073" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="68">    
+    <bendpoint x="2543" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="69">    
+    <bendpoint x="2626" y="346"/>    
+    <bendpoint x="2626" y="628"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="70">    
+    <bendpoint x="1736" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="71">    
+    <bendpoint x="2689" y="346"/>    
+    <bendpoint x="2689" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <association id="72">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="73" name="pdao"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="75">    
+    <bendpoint x="2480" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="76">    
+    <bendpoint x="2438" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <dependency id="77">    
+    <bendpoint x="1540" y="346"/>    
+    <bendpoint x="1715" y="628"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="78">    
+    <bendpoint x="2136" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="79">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <association id="80">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="81" name="aservice"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="83">    
+    <bendpoint x="2115" y="346"/>    
+    <bendpoint x="2010" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="84">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="85">    
+    <bendpoint x="1432" y="346"/>    
+    <bendpoint x="1432" y="628"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="86">    
+    <bendpoint x="2157" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="87">    
+    <bendpoint x="3009" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <dependency id="88">    
+    <bendpoint x="2417" y="346"/>    
+    <bendpoint x="2417" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="89">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="90">    
+    <bendpoint x="1947" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="91">    
+    <bendpoint x="1411" y="346"/>    
+    <bendpoint x="1411" y="628"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <dependency id="92">    
+    <bendpoint x="2988" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="93">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="94">    
+    <bendpoint x="2115" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="95">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="96" name="pservice"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="99" name="adao"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="102">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="104">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="105" name="mdao"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="108" name="ddao"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="110">    
+    <bendpoint x="2605" y="346"/>    
+    <bendpoint x="2668" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <association id="111">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="112" name="pservice"/>      
+      <multiplicity id="113" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="115" name="mservice"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="118" name="pdao"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="120">    
+    <bendpoint x="1021" y="346"/>    
+    <bendpoint x="1021" y="628"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="121">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="122">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="123">    
+    <bendpoint x="2585" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="124">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="125">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <association id="126">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="127" name="dservice"/>      
+      <multiplicity id="128" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="129">    
+    <bendpoint x="2178" y="346"/>    
+    <bendpoint x="2178" y="628"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="130">    
+    <bendpoint x="2564" y="346"/>    
+    <bendpoint x="2501" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="131">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="132">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="133">    
+    <bendpoint x="2522" y="346"/>    
+    <bendpoint x="2522" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <dependency id="134">    
+    <bendpoint x="2773" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="135">    
+    <bendpoint x="1968" y="346"/>    
+    <bendpoint x="1968" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="136">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <dependency id="137">    
+    <bendpoint x="2031" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="138">    
+    <bendpoint x="1186" y="628"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="139">    
+    <bendpoint x="1989" y="346"/>    
+    <bendpoint x="1989" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <dependency id="140">    
+    <bendpoint x="2946" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="141">    
+    <bendpoint x="2967" y="346"/>    
+    <bendpoint x="2967" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="142">    
+    <bendpoint x="2710" y="628"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="143">    
+    <bendpoint x="2668" y="346"/>    
+    <bendpoint x="2752" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="144">    
+    <bendpoint x="1453" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <dependency id="145">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="146">    
+    <bendpoint x="1689" y="346"/>    
+    <bendpoint x="1757" y="628"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="147">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="148" name="nservice"/>      
+      <multiplicity id="149" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="150">    
+    <bendpoint x="1947" y="346"/>    
+    <bendpoint x="1926" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="151">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <dependency id="152">    
+    <bendpoint x="2543" y="346"/>    
+    <bendpoint x="2564" y="628"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="153">    
+    <bendpoint x="3051" y="346"/>    
+    <bendpoint x="3093" y="628"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="154">    
+    <bendpoint x="1495" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="155">    
+    <bendpoint x="3072" y="346"/>    
+    <bendpoint x="3072" y="628"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <dependency id="156">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <association id="157">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="158" name="ddao"/>      
+      <multiplicity id="159" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="161" name="ndao"/>      
+      <multiplicity id="162" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="164" name="mservice"/>      
+      <multiplicity id="165" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="166">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="167">    
+    <bendpoint x="773" y="346"/>    
+    <bendpoint x="773" y="628"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="168">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="169">    
+    <bendpoint x="2354" y="628"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="170">    
+    <bendpoint x="2052" y="628"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="171">    
+    <bendpoint x="1561" y="346"/>    
+    <bendpoint x="1474" y="628"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="172">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="173" name="pservice"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="175">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

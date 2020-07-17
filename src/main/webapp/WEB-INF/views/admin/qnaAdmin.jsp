@@ -196,38 +196,23 @@
 			<option value="answer_yn">답변여부</option>
 		</select> &nbsp; <input id="search" type="text" name="input">&nbsp;
 		<button type="submit"
-			style="background-color: white; border: 1px solid #dfdfdf">
+			style="background-color: white; border: 1px solid #dfdfdf" id="searchBtn1">
 			<img id="searchBtn" src="../resources/img/search.png"
 				style="width: 20px;">
 		</button>
 	</form>
-	<!-- <script type="text/javascript">
-		$("#searchBtn").on("click", function() {
-			$(".answerB_write").css("display", "none");
-
-			var select = $(this).closest("button").prev().prev().find(":selected").val();
-			var input = $(this).closest("button").prev().val();
-
-			var pseqCompare = $(this).closest("body").find(".userQuestion").find("td").eq("1").html();
-			var writerCompare = $(this).closest("body").find(".userQuestion").find("td").eq("2").html();
-			var writer_ynCompare = $(this).closest("body").find(".userQuestion").find("td").eq("6").html();
-
-			if (select == "pseq") {
-				var bnoRegex = /\d$/;
-				var result = bnoRegex.test(input);
-
-				if (!result) {
-
-				} else {
-
-				}
-			} else if (select == "writer") {
-
-			} else if (select == "answer_yn") {
-
-			}
-		})
-	</script> -->
+	 <script type="text/javascript">
+   		$("#searchBtn1").on("click", function(){
+   			var a = $("#search");
+   			var regex = /\s/g;   	
+   			var result = regex.test(a);
+   			if(result){
+   				return false;
+   			}
+   			alert("공백사용금지");
+   			
+   		})
+   </script>
 
 	<div id="qnadiv" style="max-height: 1000px">
 		<table id="qnatable" style="table-layout: fixed">

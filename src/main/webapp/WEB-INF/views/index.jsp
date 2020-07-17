@@ -486,7 +486,7 @@ div {
 		             
 		             var cookieCheck = getCookie(resp[i].sysfileName);
 		             if (cookieCheck != 'N') {
-		                window.open("notice_popup?sysfileName=" + resp[i].sysfileName, 'notice_popup' + i, 'width=500, height=500, left = '
+		                window.open("notice_popup?sysfileName=" + resp[i].sysfileName, 'notice_popup' + i, 'width=500, height=500, resizable=no, left = '
 		                      + (50 + (i * 250)) + ',top =' + (50 + (i * 250)));
 		             }
 		          }

@@ -164,6 +164,8 @@ public class AdminDAO {
 	/////////////////////영재씨파트 ////////////////////////////////
 	//buyList
 		public List<BuyListDTO> selectByPageNo(Map<String, Object> selectParamBuylist){
+			System.out.println(selectParamBuylist.get("BuylistSelected"));
+			System.out.println(selectParamBuylist.get("input"));
 			return mybatis.selectList("admin.selectList", selectParamBuylist);
 		}
 		
